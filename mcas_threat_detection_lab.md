@@ -28,15 +28,15 @@ You should find the shortcut on your desktop:
 
 <!-- variables regarding the environment-->
 
-[library]: https://paris18.sharepoint.com/sites/Demo
+[library]: https://xyztenant.sharepoint.com/sites/Demo
 
 ### Users
 
 | User          | Username                      | Password       |
 | ----          | --------                      | --------       |
-| Administrator |admin@paris18.onmicrosoft.com  | ParisPassword1 |
-| Adele Vance   |adelev@paris18.onmicrosoft.com | ParisPassword1 |
-| Megan Bowens  |meganb@paris18.onmicrosoft.com | ParisPassword1 |
+| Administrator |admin@xyztenant.onmicrosoft.com  | ParisPassword1 |
+| Adele Vance   |adelev@xyztenant.onmicrosoft.com | ParisPassword1 |
+| Megan Bowens  |meganb@xyztenant.onmicrosoft.com | ParisPassword1 |
 
 ---
 
