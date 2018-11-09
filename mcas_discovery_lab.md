@@ -54,11 +54,11 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
     >
     ![Squid source](media/dis-squidsource.png)
 
-    >**NOTE:** In this lab we use FTP as the receiver type but usually companies will use Syslog.
+    >:memo: **NOTE:** In this lab we use FTP as the receiver type but usually companies will use Syslog.
 
 6. While still in the Add data source dialog, click **View sample of expected log file**.
 
-    >**NOTE:** Using this information, you can verify with your network team that the provided logs match the format expect by Cloud App Security. If it doesn't, you can should a custom parser.
+    >:memo: **NOTE:** Using this information, you can verify with your network team that the provided logs match the format expect by Cloud App Security. If it doesn't, you can should a custom parser.
 
     ![Verify log format](media/dis-verifylog.png "Verify log format")
 
@@ -100,7 +100,7 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
     >- The docker parameters to configure the log collector container: *docker run ...*
 
 12. Copy the command line provided at the end of the previous step and **minimize** the browser. Open **Putty (64-bit)**. You should have the icon on your desktop.
-    ![Putty](media/dis-puttty.png)
+    ![Putty](media/dis-putty.png "Putty")
 
 13. In the PuTTY Configuration window, enter **192.168.141.125** and click **Open**.
 
@@ -115,6 +115,7 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
     >|Username|Password|
     >|---|---|
     >|user01|Passw0rd1|
+    >
     >:warning:The password doesn't appear in the command prompt, you can safely press enter to validate the credentials.
 
     ![Putty prompt](media/dis-puttylogin.png)
@@ -146,7 +147,7 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
 
     >**INFO**: this information was provided during the log collector creation.
     >
-    >**NOTE:** the password is common to every new log collector. To change it, follow [this guide](https://docs.microsoft.com/en-us/cloud-app-security/troubleshoot-docker#docker-deployment) in the documentation.
+    >:memo: **NOTE:** the password is common to every new log collector. To change it, follow [this guide](https://docs.microsoft.com/en-us/cloud-app-security/troubleshoot-docker#docker-deployment) in the documentation.
 
     You should then be able to see a folder with your data source name.
 
@@ -172,7 +173,7 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
 
 23. You can also verify the **last data received** status on the *Data sources* tab under **Automatic log upload** settings.
 
-    ![Last data received](media/dis-lastreceived "Last data received")
+    ![Last data received](media/dis-lastreceived.png "Last data received")
 
 24. Go to the **Cloud Discovery dashboard** to verify the discovered apps.
 
@@ -180,13 +181,15 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
 
     ![Discovery data](media/dis-discoverydata.png "Discovery data")
 
-    >**NOTE:**  After validating that your logs have been successfully uploaded and processed by MCAS, you will not usually see directly the analysis of your data. Why?
+    >:memo: **NOTE:**  After validating that your logs have been successfully uploaded and processed by MCAS, you will not usually see directly the analysis of your data. Why?
     >
     >**ANSWER:** Cloud Discovery logs are only parsed **twice a day**.
 
 ---
+
 ## How to troubleshoot the Docker log collector
-[🔙](#microsoft-365-cloud-app-security)
+
+[:arrow_up: Top](#Cloud-Discovery)
 
 In this task, you will review possible troubleshooting steps to identify
 issues in automatic logs upload from the log collector.
