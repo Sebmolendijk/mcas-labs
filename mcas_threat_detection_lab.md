@@ -44,8 +44,15 @@ You should find the shortcut on your desktop:
 
 ## Labs
 
-- [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
-- [Configure and test continuous reports:](Configure-and-test-continuous-reports) :clock10: 20 min
+* [Anonymous access:](#Anonymous-access) :clock10: 5 min
+* [Impossible travel:](#Impossibletravel) :clock10: 5 min
+* [Activity from infrequent country:](#Activity-from-infrequent-country) :clock10: 5 min
+* [Malware detection:](#Malware-detection) :clock10: 5 min
+* [Email exfiltration using suspicious inbox forwarding:](#Email-exfiltration-using-suspicious-inbox-forwarding) :clock10: 5 min
+* [Ransomware activity:](#Ransomware-activity) :clock10: 5 min
+* [Suspicious application consent:](#Suspicious-application-consent) :clock10: 5 min
+* [Impossible travel:](#Impossibletravel) :clock10: 5 min
+
 ---
 
 ## Anonymous access
@@ -396,11 +403,7 @@ Cloud App Security provides by default many [policies templates](https://docs.mi
 
 ## TO EDIT - old version
 
-# Threat Detection
-[🔙](#microsoft-365-cloud-app-security)
 
-### Estimated time to complete
-20 min
 
 Cloud App Security provides several [threats detection
 policies](https://docs.microsoft.com/en-us/cloud-app-security/anomaly-detection-policy)

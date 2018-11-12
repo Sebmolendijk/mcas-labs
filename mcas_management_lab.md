@@ -5,7 +5,7 @@
 ## Labs
 
 - [Manage admin access:](Manage-admin-access) :clock10: 15 min
-- [Cloud App Security PowerShell module introduction:](MCAS-PowerShell-module-introduction) :clock10: 20 min
+- [Cloud App Security PowerShell module:](MCAS-PowerShell-module) :clock10: 20 min
 
 ---
 
@@ -45,7 +45,7 @@ in the Cloud App Security portal.
 As the MCAS admin for your company, work with the person next to you to
 configure an external access for the Managed Security Service Provider.
 
-## Cloud App Security PowerShell module introduction
+## Cloud App Security PowerShell module
 
 [:arrow_up: Top](#Management)
 

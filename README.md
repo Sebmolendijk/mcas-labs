@@ -1,13 +1,19 @@
 # Microsoft Cloud App Security
 
-This lab will guide you through the Microsoft Cloud App Security (MCAS) capabilities.
-We expect you to already have some basic experience with MCAS deployment and configuration.
+This lab will guide you through the different Microsoft Cloud App Security (MCAS) capabilities.
+Although some labs are pretty straight forward ,we expect you to already have some basic experience with Cloud App Security or Office 365 management.
 
-Most MCAS treat detections capabilities rely on auditing being enabled in your environment. By default, auditing is not enabled in Office 365 and must be turned on using the **Security & Compliance** admin console or PowerShell. In addition, some applications like Exchange Online require extra configuration, like [enabling auditing for the mailboxes](https://docs.microsoft.com/en-us/office365/securitycompliance/enable-mailbox-auditing?redirectSourcePath=%252fen-us%252farticle%252fenable-mailbox-auditing-in-office-365-aaca8987-5b62-458b-9882-c28476a66918)).
+>:warning::warning::warning: Before going to the different labs section, please complete the [environment preparation](mcas_lab_preparation.md). :warning::warning::warning:
 
->:memo: As this operation can take up to 24h, your instructor will provide you access to another environment to review the alerts for the threat detection lab.
+## Lab environment
 
-Before going to the labs section, please complete the [environment preparation](mcas_lab_preparation.md).
+![Lab environment](media/mcaslabenvironment.png "Lab environment")
+
+* Client01 is a Windows 10 VM that will be used to access Office 365 and Cloud app Security management consoles and configure the log collector running on LinuxVM, using Putty.
+* LinuxVM is an Ubuntu 18.04 computer on which we install Docker to run the Cloud App Security Discovery log collector.
+* Office 365 and Cloud App Security are test tenants for the labs.
+
+>:memo: We recommend using the [Cloud App Security documentation](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security "Cloud App Security documentation") to have details on the different use cases, capabilities and configuration steps.
 
 ---
 
@@ -21,6 +27,6 @@ The different Cloud App Security capabilities covered in the labs are:
 - [Conditional Access App Control](mcas_app_control_lab.md)
 - [Management](mcas_management_lab.md)
 
->:warning: All the las are independents from each others and can be taken in any order. Only the **environment preparation** must be complete before starting the other sections.
+>:memo: All the labs are independents from each others and can be taken in any order. Only the **[environment preparation](mcas_lab_preparation.md)** must be complete before starting any lab.
 
 ---

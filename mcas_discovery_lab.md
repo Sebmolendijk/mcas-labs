@@ -7,9 +7,9 @@ To use this capability, you will perform in this lab the configuration and troub
 
 ## Labs
 
-- [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
-- [Configure and test continuous reports:](Configure-and-test-continuous-reports) :clock10: 20 min
-- [How to troubleshoot the Docker log collector:](How-to-troubleshoot-the-Docker-log-collector) :clock10: 15 min
+* [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
+* [Configure and test continuous reports:](Configure-and-test-continuous-reports) :clock10: 20 min
+* [How to troubleshoot the Docker log collector:](How-to-troubleshoot-the-Docker-log-collector) :clock10: 15 min
 
 ---
 
@@ -21,7 +21,7 @@ To use this capability, you will perform in this lab the configuration and troub
 
 ## Configure and test continuous reports
 
-[:arrow_up: Top](#Cloud-Discovery)
+[:arrow_up: Top](#Cloud-App-Security-Discovery-lab)
 
 > NOTE: The Docker engine has been pre-installed on LinuxVM in your lab environment, using the commands provided in the [deployment guide](https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker-ubuntu).
 
@@ -104,8 +104,8 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
     ```
 
     >**INFO:** This command line contains the different parameters to instanciate a new log collector on the Linux host:
-    >- An API token to connect to Cloud App Security for uploading the logs: *1f5b5fb2a0d778e3d57f26ca5ab11574db0751166477940528ccf19a7c4*
-    >- The docker parameters to configure the log collector container: *docker run ...*
+    >* An API token to connect to Cloud App Security for uploading the logs: *1f5b5fb2a0d778e3d57f26ca5ab11574db0751166477940528ccf19a7c4*
+    >* The docker parameters to configure the log collector container: *docker run ...*
 
 12. Copy the command line provided at the end of the previous step and **minimize** the browser. Open **Putty (64-bit)**. You should have the icon on your desktop.
     ![Putty](media/dis-putty.png "Putty")
@@ -197,14 +197,14 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
 
 ## How to troubleshoot the Docker log collector
 
-[:arrow_up: Top](#Cloud-Discovery)
+[:arrow_up: Top](#Cloud-App-Security-Discovery-lab)
 
 In this task, you will review possible troubleshooting steps to identify issues in automatic logs upload from the log collector.
 There are several things to test at different locations: in the log collector, in MCAS, at the network level.
 
 ### Useful commands
 
-- `cd` : *Used to navigate in the directories*
+* `cd` : *Used to navigate in the directories*
     >**Examples:**
     >
     >`cd /var/adallom` : *to go to the specified directory*
@@ -213,18 +213,18 @@ There are several things to test at different locations: in the log collector, i
     >
     >`cd ..` : *to go to the parent directory*
 
-- `more` or `cat` : *Used to display the content of the logs*
+* `more` or `cat` : *Used to display the content of the logs*
     > **Examples:**
     >
     >`more trace.log` : *to display the content of the trace.log file*
 
-- `tail` : *Used to display the content of the logs from the end*
+* `tail` : *Used for outputting the last part of files*
 
-- `ll` : *Used to display the content of the directory as a list*
+* `ll` : *Used to display the content of the directory as a list*. This command is an alias for `ls -l`
 
-- `clear` : *Used to clear the screen*
+* `clear` : *Used to clear the screen*
 
-- `tab key` : Used to perform autocompletion
+* `tab key` : Used to perform autocompletion
 
 ### Verify the log collector (container) status
 
@@ -280,9 +280,9 @@ There are several things to test at different locations: in the log collector, i
     ![adallom folder](media/dis-dockerll.png "adallom folder")
 
     Go to the following folders and review their log files using `more`:
-    - **/adallom/ftp/discovery**: this folder contains the data source folders where you send the log files for automated upload. This is also the default folder when logging into the collector with FTP credentials.
-    - **/adallom/syslog/discovery**: if you setup the log collector to receive syslog messages, this is where the flat file of aggregated messages will reside until it is uploaded.
-    - **/adallom/discoverylogsbackup**: this folder contains the last file that was sent to MCAS. This is useful for looking at the raw log in case there are parsing issues.
+    * **/adallom/ftp/discovery**: this folder contains the data source folders where you send the log files for automated upload. This is also the default folder when logging into the collector with FTP credentials.
+    * **/adallom/syslog/discovery**: if you setup the log collector to receive syslog messages, this is where the flat file of aggregated messages will reside until it is uploaded.
+    * **/adallom/discoverylogsbackup**: this folder contains the last file that was sent to MCAS. This is useful for looking at the raw log in case there are parsing issues.
 
 3. To validate that logs are correctly received from the network appliance, you can also verify the **/var/log/pure-ftpd** directory and check the transfer log:
 
@@ -297,8 +297,8 @@ There are several things to test at different locations: in the log collector, i
     ![var log](media/dis-varlog.png "var log")
 
     Go to the following folders and review their content and log files using `ll` and `more` or `tail`:
-    - **/var/log/adallom/columbus**: this folder is where you will find log files useful for troubleshooting issues with the collector sending files to Cloud App Security. In the **log-archive** folder you can find previous logs compressed as *.tar.gz* files that could be used to send to support for example.
-    - **/var/log/adallom/columbusInstaller**: this is where you will investigate issues with the log collector itself. You will find here logs related to the configuration and bootstrapping of the collector. For example, **trace.log** will show you the bootstrapping process:
+    * **/var/log/adallom/columbus**: this folder is where you will find log files useful for troubleshooting issues with the collector sending files to Cloud App Security. In the **log-archive** folder you can find previous logs compressed as *.tar.gz* files that could be used to send to support for example.
+    * **/var/log/adallom/columbusInstaller**: this is where you will investigate issues with the log collector itself. You will find here logs related to the configuration and bootstrapping of the collector. For example, **trace.log** will show you the bootstrapping process:
 
     ![Bootstrapping log](media/dis-bootstrapping.png "bootstrapping log")
 
@@ -306,6 +306,6 @@ There are several things to test at different locations: in the log collector, i
 
 An easy way to test the connectivity after configuring the log collector is to download a sample of your appliance logs from and use WinSCP to connect to the log collector to upload it and see if it gets uploaded to Cloud App Security, as you did in the previous exercise
 
-![Pending log](media/dis-logpending.png "Log pending")
+![Pending log](media/dis-pending.png "Log pending")
 
 >:memo: **NOTE:**  If the log stays in the source folder for too long, then you know you probably have a connection issue between the log collector and Cloud App Security and should go investigate the logs reviewed previously.
