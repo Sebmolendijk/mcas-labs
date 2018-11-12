@@ -22,6 +22,8 @@ You should find the shortcut on your desktop:
 
 ## Environment
 
+[:arrow_up: Top](#Cloud-Discovery)
+
 ### URLs
 
 * Office 365: https://portal.office.com
@@ -40,13 +42,19 @@ You should find the shortcut on your desktop:
 | Adele Vance   |adelev@xyztenant.onmicrosoft.com | ParisPassword1 |
 | Megan Bowens  |meganb@xyztenant.onmicrosoft.com | ParisPassword1 |
 
+## Labs
+
+- [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
+- [Configure and test continuous reports:](Configure-and-test-continuous-reports) :clock10: 20 min
 ---
 
-# Anonymous access
+## Anonymous access
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 This detection identifies that users were active from an IP address that has been identified as an anonymous proxy IP address. These proxies are used by people who want to hide their device’s IP address, and may be used for malicious intent. This detection uses a machine learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
 
-## Simulate the malicious activity
+### Simulate the malicious activity
 
 1. On your Windows 10 lab VM, open TOR browser:
 
@@ -56,7 +64,7 @@ This detection identifies that users were active from an IP address that has bee
 
 3. Go to [this SharePoint library][library] and download some documents.
 
-## Investigate
+### Investigate
 
 As your authentication during the previous steps came from an anonymous IP address, it will be detected as suspicious by Cloud App Security.
 
@@ -86,17 +94,19 @@ As your authentication during the previous steps came from an anonymous IP addre
 
 ---
 
-# Impossible travel
+## Impossible travel
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 This detection identifies two user activities (is a single or multiple sessions) originating from geographically distant locations within a time period shorter than the time it would have taken the user to travel from the first location to the second, indicating that a different user is using the same credentials. This detection uses a machine learning algorithm that ignores obvious "false positives" contributing to the impossible travel condition, such as VPNs and locations regularly used by other users in the organization. The detection has an initial learning period of seven days during which it learns a new user’s activity pattern.
 
-## Simulate the malicious activity
+### Simulate the malicious activity
 
 1. In your Windows 10 lab VM, open Office 365 web mail by going to https://outlook.office.com and enter Adele Vance credentials. This authentication will come from an Azure IP address, where your client is hosted.
 
 2. On your host PC, go to https://outlook.office.com and authenticate again as Adele Vance.
 
-## Investigate
+### Investigate
 
 As the first and the second authentication came from distinct locations, Cloud App Security will detect that those time to travel between those two locations was to short and will then alert you.
 
@@ -114,11 +124,13 @@ As the first and the second authentication came from distinct locations, Cloud A
 
 ---
 
-# Activity from infrequent country 
+## Activity from infrequent country
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 This detection considers past activity locations to determine new and infrequent locations. The anomaly detection engine stores information about previous locations used by users in the organization. An alert is triggered when an activity occurs from a location that wasn't recently or never visited by any user in the organization.
 
-## Investigate
+### Investigate
 
 After an initial learning period, Cloud App Security will detect that this location was not used before by your user or other people within the organization and will then alert you.
 
@@ -136,15 +148,17 @@ After an initial learning period, Cloud App Security will detect that this locat
 
 ---
 
-# Malware detection
+## Malware detection
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 This detection identifies malicious files in your cloud storage, whether they're from your Microsoft apps or third-party apps. Microsoft Cloud App Security uses Microsoft's threat intelligence to recognize whether certain files are associated with known malware attacks and are potentially malicious. This built-in policy is disabled by default. Not every file is scanned, but heuristics are used to look for files that are potentially risky. After files are detected, you can then see a list of **Infected files**. Click on the malware file name in the file drawer to open a malware report that provides you with information about that type of malware the file is infected with.
 
-## Simulate the malicious activity
+### Simulate the malicious activity
 
 1. In your Windows 10 lab VM, create a new text file __*test-malware.txt*__ with the following content:
 
-   ```
+   ``` txt
    X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
    ```
 
@@ -170,7 +184,7 @@ This detection identifies malicious files in your cloud storage, whether they're
 
    ![Malware detected](media/td-malwaredetected.png "Malware detected")
 
-## Investigate
+### Investigate
 
 1. Go back to the Cloud App Security portal and review the alerts.
 
@@ -198,11 +212,13 @@ This detection identifies malicious files in your cloud storage, whether they're
 
 ---
 
-# Email exfiltration using suspicious inbox forwarding
+## Email exfiltration using suspicious inbox forwarding
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 This detection looks for suspicious email forwarding rules, for example, if a user created an inbox rule that forwards a copy of all emails to an external address.
 
-## Simulate the malicious activity
+### Simulate the malicious activity
 
 1. On your Windows 10 lab VM, open TOR browser.
 
@@ -233,7 +249,7 @@ This detection looks for suspicious email forwarding rules, for example, if a us
    |:----------|:-----------|:---------------|
    | ![Inbox rules](media/td-newinboxrules01.png "Inbox rules") | ![Inbox rules](media/td-newinboxrules02.png "Inbox rules") | ![Inbox rules](media/td-newinboxrules03.png "Inbox rules") |
 
-## Investigate
+### Investigate
 
 As the rules redirects your user’s emails to a suspicious external address, Cloud App Security will detect this rule creation and will then alert you.
 
@@ -253,13 +269,13 @@ As the rules redirects your user’s emails to a suspicious external address, Cl
 
 ---
 
-# Ransomware activity
+## Ransomware activity
 
 Cloud App Security extended its ransomware detection capabilities with anomaly detection to ensure a more comprehensive coverage against sophisticated Ransomware attacks. Using our security research expertise to identify behavioral patterns that reflect ransomware activity, Cloud App Security ensures holistic and robust protection. If Cloud App Security identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process. This data is collected in the logs received from connected APIs and is then combined with learned behavioral patterns and threat intelligence, for example, known ransomware extensions. For more information about how Cloud App Security detects ransomware, see Protecting your organization against ransomware.
 
-> **NOTE:** For security reasons, we will note detail in this lab how to simulate ransomware attacks
+>:memo:**NOTE:** For security reasons, we will note detail in this lab how to simulate ransomware attacks
 
-## Investigate
+### Investigate
 
 As the rules redirects your user’s emails to a suspicious external address, Cloud App Security will detect this rule creation and will then alert you.
 
@@ -289,7 +305,9 @@ As the rules redirects your user’s emails to a suspicious external address, Cl
 
 ---
 
-# Suspicious application consent
+## Suspicious application consent
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 Many third-party productivity apps that might be installed by business users in your organization request permission to access user information and data and sign in on behalf of the user in other cloud apps, such as Office 365, G Suite and Salesforce. 
 When users install these apps, they often click accept without closely reviewing the details in the prompt, including granting permissions to the app. This problem is compounded by the fact that IT may not have enough insight to weigh the security risk of an application against the productivity benefit that it provides.
@@ -299,7 +317,7 @@ Here is an example of such user consent:
 
 ![App consent](media/td-appconsent.png "App consent")
 
-## Investigate
+### Investigate
 
 1. Without even creating policies, Cloud App Security shows you the applications that received permissions from your users:
 
@@ -340,7 +358,9 @@ Here is an example of such user consent:
 
 ---
 
-# Create your own policies
+## Create your own policies
+
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 Now that we reviewed some of the default detection capabilities of Cloud App Security, you should start creating your [own policies](https://docs.microsoft.com/en-us/cloud-app-security/control-cloud-apps-with-policies).
 Cloud App Security provides by default many [policies templates](https://docs.microsoft.com/en-us/cloud-app-security/policy-template-reference) to start creating your custom policies.
@@ -374,7 +394,7 @@ Cloud App Security provides by default many [policies templates](https://docs.mi
 
 ---
 
-# TO EDIT - old version
+## TO EDIT - old version
 
 # Threat Detection
 [🔙](#microsoft-365-cloud-app-security)

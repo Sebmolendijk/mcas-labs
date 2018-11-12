@@ -1,13 +1,21 @@
-# Cloud Discovery
+# Cloud App Security Discovery lab
 
-[:arrow_left: Home](./README.md)
-
-## Estimated time to complete
-
-:clock10: 30 min
+[:arrow_left: Home](README.md)
 
 Continuous reports in Cloud Discovery analyze all logs that are forwarded from your network using Cloud App Security. They provide improved visibility over all data, and automatically identify anomalous use using either the Machine Learning anomaly detection engine or by using custom policies that you define.
 To use this capability, you will perform in this lab the configuration and troubleshooting of the Cloud Discovery feature.
+
+## Labs
+
+- [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
+- [Configure and test continuous reports:](Configure-and-test-continuous-reports) :clock10: 20 min
+- [How to troubleshoot the Docker log collector:](How-to-troubleshoot-the-Docker-log-collector) :clock10: 15 min
+
+---
+
+## Create and review a snapshot reports
+
+*TO DO*
 
 ---
 
@@ -191,162 +199,113 @@ curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/p
 
 [:arrow_up: Top](#Cloud-Discovery)
 
-In this task, you will review possible troubleshooting steps to identify
-issues in automatic logs upload from the log collector.
-
-There are several things to test at different locations: in the log
-collector, in MCAS, at the network level.
+In this task, you will review possible troubleshooting steps to identify issues in automatic logs upload from the log collector.
+There are several things to test at different locations: in the log collector, in MCAS, at the network level.
 
 ### Useful commands
-	
-- To navigate in the directories, use the "cd" command.
-	Examples: 
 
-	**cd /var/adallom** to go to the specified directory
+- `cd` : *Used to navigate in the directories*
+    >**Examples:**
+    >
+    >`cd /var/adallom` : *to go to the specified directory*
+    >
+    >`cd /` : *to go to the root directory*
+    >
+    >`cd ..` : *to go to the parent directory*
 
-	**cd /** to go to the root directory
+- `more` or `cat` : *Used to display the content of the logs*
+    > **Examples:**
+    >
+    >`more trace.log` : *to display the content of the trace.log file*
 
-	**cd ..** to go to the parent directory
-	
-- To display the content of the logs, use the **more file_name** command
-- To display the content of the directory, use the **ll** command
-- To clear the screen, use the **clear** command
+- `tail` : *Used to display the content of the logs from the end*
 
-- For saving typing, use the **Tab** key and perform autocompletion.
+- `ll` : *Used to display the content of the directory as a list*
+
+- `clear` : *Used to clear the screen*
+
+- `tab key` : Used to perform autocompletion
 
 ### Verify the log collector (container) status
 
-1. On Client01, open a session on PuTTY to **192.168.141.125** and use the credentials below.
+1. On **Client01**, open a session on PuTTY to **192.168.141.125** and use the credentials below.
+    In the PuTTY Configuration window, enter **192.168.141.125** and click **Open**.
 
-	**user01**
+    ![Putty config](media/dis-puttyconfig.png "Putty config")
 
-	**Passw0rd1**
+    Log in using the credentials below.
+    >|Username|Password|
+    >|---|---|
+    >|user01|Passw0rd1|
+    >
+    >:warning:The password doesn't appear in the command prompt, you can safely press enter to validate the credentials.
 
-1. Run the following commands:
+2. Run the following commands:
 
-	```
-	sudo -i
-	```
-	```
-	docker stats
-	```
-	This command will show you the status of the log collector instance:
+    ``` bash
+    sudo -i
+    docker stats
+    ```
+    ![Docker stats](media/dis-dockerstats.png "Docker stats")
 
-	![CONTAINER ID 2d7cadgfS4a1 13.14\* CPU 1.22\* MEM USAGE / LIMIT 187
-	.1MiB / 1.39GiB NET I/o 10.gMB / 3 .23MB](vl5158cy.jpg)
-1. Press **Ctrl-C** to end the command. 
-1. Next, run the command below:
+     >**INFO:** This command will show you the status of the log collector instance.
 
-	```
-	docker logs --details LogCollector
-	```
+3. Press `Ctrl-C` to end the command.
 
-	This command will show you the logs from the log collector to verify if
-	it encountered errors when initiating:
+4. Next, run the command below:
 
+    ``` bash
+    docker logs --details LogCollector
+    ```
+    ![Docker log](media/dis-dockerlog.png "Docker log")
 
+     >**INFO:** This command will show you the container logs to verify if it encountered errors when initiating.
 
-	![rootaubuntu-srt: \'hame,\'seb 5 \--dzt.ei15 Setting ftp configuration
-	Enter again: Setting syslog Reading configuration.. . Installing
-	collector successfully! zenzitive Starting 2018-06-28 2018-06-28
-	2018-06-28 2010-06-28 2018-06-28 08 2018-06-28 2018-06-28 seo 2018-06-28
-	53B 2018-06-28 €67 2018-06-28 2018-06-28 667 08:28: is, CRIT WARN I NEO
-	CR IT I NEO 1 NEO INFO I NEO INSO I NEO INFO I NEO INFO as uzez in file)
-	during parsing RBC interface \' supervisor • initialized http without
-	HTTP checking Started With pid 1059 spawned: spawned : success : • with
-	1062 •rsyslog• with pid 1063 with pid 2064 • Columbus\' with 1065
-	rsyslog RUNNING stace, ftpd entered RUNNING state, pza RUNNING scat\* ,
-	Stayed up for](4bfomeag.jpg)
-
-	 
-
-#### To go further in the troubleshooting, you can connect to the log collector container to investigates the different logs.
+### Verify the log collector logs
 
 1. Type the following command:
 
-	```
-	docker exec -it LogCollector bash
-	```
+    ``` bash
+    docker exec -it LogCollector bash
+    ```
+     >**INFO:** This command will execute the container's bash. You will then be able to execute commands *from inside* of the log collector.
 
-1. You can then explore the container filesystem and inspect the
-	**/var/adallom** directory. This directory is where you will investigate
-	issues with the syslog or ftp logs being sent to the collector
+2. You can now explore the container filesystem and inspect the **/var/adallom** directory. This directory is where you will investigate most of the issues with the syslog or ftp logs being sent to the log collector.
 
-	![ovjlyn26.jpg](media/ovjlyn26.jpg)
+    ``` bash
+    cd /var/adallom
+    ll
+    ```
 
--   **/adallom/ftp/discovery**: this folder contains the data source
-    folders where you send the log files for automated upload. This is
-    also the default folder when logging into the collector with FTP
-    credentials.
+    ![adallom folder](media/dis-dockerll.png "adallom folder")
 
--   **/adallom/syslog/discovery**: if you setup the log collector to
-    receive syslog messages, this is where the flat file of aggregated
-    messages will reside until it is uploaded.
+    Go to the following folders and review their log files using `more`:
+    - **/adallom/ftp/discovery**: this folder contains the data source folders where you send the log files for automated upload. This is also the default folder when logging into the collector with FTP credentials.
+    - **/adallom/syslog/discovery**: if you setup the log collector to receive syslog messages, this is where the flat file of aggregated messages will reside until it is uploaded.
+    - **/adallom/discoverylogsbackup**: this folder contains the last file that was sent to MCAS. This is useful for looking at the raw log in case there are parsing issues.
 
--   **/adallom/discoverylogsbackup**: this folder contains the last file
-    that was sent to MCAS. This is useful for looking at the raw log in
-    case there are parsing issues.
+3. To validate that logs are correctly received from the network appliance, you can also verify the **/var/log/pure-ftpd** directory and check the transfer log:
 
-1. To validate that logs are correctly received from the network appliance,
-you can also verify the **/var/log/pure-ftpd** directory and check the
-transfer log:
+    ``` bash
+    tail transfer.log
+    ```
 
-	![erx39v7i.jpg](media/erx39v7i.jpg)
+    ![FTP logs](media/dis-pureftp.png "FTP logs")
 
-1. Now, move to the **/var/log/adallom** directory.
+4. Now, move to the **/var/log/adallom** directory.
 
-	![0h029uih.jpg](media/0h029uih.jpg)
+    ![var log](media/dis-varlog.png "var log")
 
--   **/var/log/adallom/columbus**: this folder is where you will find
-    log files useful for troubleshooting issues with the collector
-    sending files. In the log-archive folder you can copy previous logs
-    compressed as .tar.gz files off the collector to send to support.
+    Go to the following folders and review their content and log files using `ll` and `more` or `tail`:
+    - **/var/log/adallom/columbus**: this folder is where you will find log files useful for troubleshooting issues with the collector sending files to Cloud App Security. In the **log-archive** folder you can find previous logs compressed as *.tar.gz* files that could be used to send to support for example.
+    - **/var/log/adallom/columbusInstaller**: this is where you will investigate issues with the log collector itself. You will find here logs related to the configuration and bootstrapping of the collector. For example, **trace.log** will show you the bootstrapping process:
 
--   **/var/log/adallom/columbusInstaller**: this is where you will
-    investigate issues with the collector itself. You will find here
-    logs related to the configuration and bootstrapping of the
-    collector. For example, trace.log will show you the bootstrapping
-    process:
+    ![Bootstrapping log](media/dis-bootstrapping.png "bootstrapping log")
 
-    ![ks4ttuuq.jpg](media/ks4ttuuq.jpg)
+### Verify the connectivity between the log collector and Cloud App Security
 
- 
+An easy way to test the connectivity after configuring the log collector is to download a sample of your appliance logs from and use WinSCP to connect to the log collector to upload it and see if it gets uploaded to Cloud App Security, as you did in the previous exercise
 
+![Pending log](media/dis-logpending.png "Log pending")
 
-### Verify the connectivity between the log collector and MCAS
-
-An easy way to test this is to download a sample of your appliance logs
-from MCAS and use WinSCP to connect to the log collector to upload that
-log and see if it gets uploaded to MCAS.
-
- 
-
-1. Upload the logs in the folder named by your source:
-
-![bqhxmpns.jpg](media/bqhxmpns.jpg)
-
- 
-
-1. Then, check in MCAS the status:
-
-	![21pseval.jpg](media/21pseval.jpg)
-
- 
-
-	![mt0o095m.jpg](media/mt0o095m.jpg)
-
- 
-
-	> NOTE: If the log stays in the source folder, then you know you probably have a
-connection issue between the log collector and MCAS.
-
-Another way to validate the connection is to log into the container like
-in the previous task and then run *netstat -a* to check if we see
-connections to MCAS:
-
-1. In the PuTTY window, type the command below:
-
-	```
-	netstat -a
-	```
-	![rxvauw6e.jpg](media/rxvauw6e.jpg)
+>:memo: **NOTE:**  If the log stays in the source folder for too long, then you know you probably have a connection issue between the log collector and Cloud App Security and should go investigate the logs reviewed previously.

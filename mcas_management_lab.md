@@ -1,10 +1,17 @@
 # Management
-[🔙](#microsoft-365-cloud-app-security)
 
-### Estimated time to complete
-30 min
+[:arrow_left: Home](./README.md)
 
-### Manage admin access 
+## Labs
+
+- [Manage admin access:](Manage-admin-access) :clock10: 15 min
+- [Cloud App Security PowerShell module introduction:](MCAS-PowerShell-module-introduction) :clock10: 20 min
+
+---
+
+## Manage admin access
+
+[:arrow_up: Top](#Management)
 
 For this task, you are asked to delegate admin access to other users,
 without adding them to the Global Admin management role.
@@ -12,7 +19,7 @@ without adding them to the Global Admin management role.
 Documentation:
 [https://docs.microsoft.com/en-us/cloud-app-security/manage-admins](https://docs.microsoft.com/en-us/cloud-app-security/manage-admins)
 
-#### Delegate user group administration
+### Delegate user group administration
 
 You are asked to delegate the management of MCAS for US employees to a
 new administrator.
@@ -29,7 +36,7 @@ By following the explanations in the documentation you have to:
 4.   Connect to MCAS with "mcasAdminUS" and compare the activities,
     alerts and actions that this admin can perform
 
-#### Delegate MCAS administration to an external admin
+### Delegate MCAS administration to an external admin
 
 As a Managed Security Service Providers (MSSPs), you are asked by your
 customer how you could access their environment to manage their alerts
@@ -38,7 +45,9 @@ in the Cloud App Security portal.
 As the MCAS admin for your company, work with the person next to you to
 configure an external access for the Managed Security Service Provider.
 
-### MCAS PowerShell module introduction
+## Cloud App Security PowerShell module introduction
+
+[:arrow_up: Top](#Management)
 
 To help administrators interact with MCAS in a programmatic way, two
 Microsoft employees created a non-official PowerShell module for Cloud

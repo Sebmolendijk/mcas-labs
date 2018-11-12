@@ -1,24 +1,23 @@
 # Information protection
 
-[🔙](#microsoft-365-cloud-app-security)
-
-15 min
+[:arrow_left: Home](./README.md)
 
 In a perfect world, all your employees understand the importance of information protection and work within your policies. But in a real world, it's probable that a partner who works with accounting uploads a document to your Box repository with the wrong permissions, and a week later you realize that your enterprise's confidential information was leaked to your competition.
 Microsoft Cloud App Security helps you prevent this kind of disaster before it happens.
 
 In this task, you will protect a sensitive document library in SharePoint Online using the native integration with Azure Information Protection.
 
-## Integrate MCAS with Azure Information Protection
+## Labs
 
-As explained in the [documentation](https://docs.microsoft.com/en-us/cloud-app-security/azip-integration), configure the integration between the two solutions. 
+- [Apply AIP classification to SSN documents:](Apply-AIP-classification-to-SSN-documents) :clock10: 10 min
+- [Quarantine sensitive PDF for review:](Quarantine-sensitive-PDF-for-review) :clock10: 10 min
+- [Test our policies:](Test-our-policies) :clock10: 10 min
 
-1. Go to Cloud App Security settings and check the **Automatically scan new files** checkbox.
-
-	![imku224m.jpg](media/imku224m.jpg)
-2.  Click on the **Save** button.
+---
 
 ## Apply AIP classification to SSN documents
+
+[:arrow_up: Top](#Information-protection)
 
 3.  Go to **Policies**.
 
@@ -51,13 +50,16 @@ As explained in the [documentation](https://docs.microsoft.com/en-us/cloud-app-s
 	
 		![a89zd1k2.jpg](media/a89zd1k2.jpg)
 	1. In the Governance actions, select **Apply classification label**.
-	
+
+    >:memo: If you are not able to select Azure Information Protection templates, verify that you configured the integration in the prerequisites section.
+
 		![6wfpj4to.jpg](media/6wfpj4to.jpg)
 	1. Click **Create** to finish the policy creation.
 
 ---
-# Quarantine sensitive PDF for review
-[🔙](#microsoft-365-cloud-app-security)
+## Quarantine sensitive PDF for review
+
+[:arrow_up: Top](#Information-protection)
 
 File policies are a great tool for finding threats to your information protection policies, for instance finding places where users stored sensitive information, credit card numbers and third-party ICAP files in your cloud. With Microsoft Cloud App Security, not only can you detect these unwanted files stored in your cloud that leave you vulnerable, but you can take immediate action to stop them in their tracks and lock down the files that pose a threat. Using Admin quarantine, you can protect your files in the cloud and remediate problems, as well as prevent future leaks from occurring.
 This is what we are going to configure in this lab.
@@ -73,7 +75,7 @@ This is what we are going to configure in this lab.
 	1. In user notification, type **Your content has been quarantined. Please contact your admin.**
 	1. Click on the Save button.
 
-    >NOTE: As best practice, you should define a dedicated site with restricted access as the admin quarantine location.
+    >:memo: As best practice, you should create and use a **dedicated** site with restricted access as the admin quarantine location.
 
 	![hl55gqvd.jpg](media/hl55gqvd.jpg)
 4.  Next, go to the policies menu and create a new **file policy**.
@@ -87,8 +89,12 @@ This is what we are going to configure in this lab.
 	1. In Governance actions, select **Put in admin quarantine** and click on the Create button.
 	
 	![1wlrz08d.jpg](media/1wlrz08d.jpg)
- 
+
+---
+
 ## Test our policies
+
+[:arrow_up: Top](#Information-protection)
 
 To test our files policies, perform the following tasks:
 
