@@ -91,7 +91,7 @@ To connect Cloud App Security to Office 365, you will have to use the Office 365
 To prepare the **Information Protection** lab, we have to enable the integration between Cloud App Security and Azure Information Protection as explained in the [Cloud App Security documentation](https://docs.microsoft.com/en-us/cloud-app-security/azip-integration). Enabling the integration between the two solutions is as easy as selecting one single checkbox.
 
 1. Go to Cloud App Security settings.
-    ![Settings](media/settings.png "Settings")
+    ![Settings](media/conf-settings.png "Settings")
 
 2. Go down in the settings to the **Azure Information Protection** section and check the **Automatically scan new files** checkbox and click on the "**Save** button.
     ![Enable AIP](media/conf-aip.png "Enable AIP")
