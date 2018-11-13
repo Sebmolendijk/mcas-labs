@@ -21,11 +21,11 @@ Although some labs are pretty straight forward ,we expect you to already have so
 
 The different Cloud App Security capabilities covered in the labs are:
 
-- [Cloud Discovery](mcas_discovery_lab.md)
-- [Threat Detection](mcas_threat_detection_lab.md)
-- [Information Protection](mcas_information_protection_lab.md)
-- [Conditional Access App Control](mcas_app_control_lab.md)
-- [Management](mcas_management_lab.md)
+* [Cloud Discovery](mcas_discovery_lab.md)
+* [Threat Detection](mcas_threat_detection_lab.md)
+* [Information Protection](mcas_information_protection_lab.md)
+* [Conditional Access App Control](mcas_app_control_lab.md)
+* [Management](mcas_management_lab.md)
 
 >:memo: All the labs are independents from each others and can be taken in any order. Only the **[environment preparation](mcas_lab_preparation.md)** must be complete before starting any lab.
 
