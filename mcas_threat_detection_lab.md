@@ -16,13 +16,12 @@ You should find the shortcut on your desktop:
 
 ![TOR browser icon](media/td-toricon.png "TOR browser")
 
-> **WARNING:**
-> This tools is for research purposes only. Microsoft does **not** own this tool
+> :warning: This tools is for research purposes only. Microsoft does **not** own this tool
 > nor can it guarantee its behavior. This tools should only be run in a test lab environment.
 
 ## Environment
 
-[:arrow_up: Top](#Cloud-Discovery)
+[:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
 ### URLs
 

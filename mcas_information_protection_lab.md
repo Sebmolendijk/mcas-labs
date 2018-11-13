@@ -5,8 +5,6 @@
 In a perfect world, all your employees understand the importance of information protection and work within your policies. But in a real world, it's probable that a partner who works with accounting uploads a document to your Box repository with the wrong permissions, and a week later you realize that your enterprise's confidential information was leaked to your competition.
 Microsoft Cloud App Security helps you prevent this kind of disaster before it happens.
 
-In this task, you will protect a sensitive document library in SharePoint Online using the native integration with Azure Information Protection.
-
 ## Labs
 
 * [Apply AIP classification to SSN documents:](Apply-AIP-classification-to-SSN-documents) :clock10: 10 min
@@ -17,51 +15,68 @@ In this task, you will protect a sensitive document library in SharePoint Online
 
 ## Apply AIP classification to SSN documents
 
+In this task, you will protect a specific sensitive document library in SharePoint Online using the native integration with Azure Information Protection.
+We will apply an Azure Information Protection template on documents containing social security numbers.
+
 [:arrow_up: Top](#Information-protection)
 
-3.  Go to **Policies**.
+1. In the Cloud App Security portal, go to **Policies**.
 
-	![i2nnuzsg.jpg](media/i2nnuzsg.jpg)
-4.  Create a new **File policy**.
+    ![Policies](media/info-policies.png "Policies")
 
-	![aoodi6ml.jpg](media/aoodi6ml.jpg)
-5.  Provide the following settings to that policy:
-	1. Policy name: **Protect SSN documents in sensitive site**.
-	1. Files matching all of the following: **remove the filters**.
-	1. Apply to: **selected folder**.
+2. Create a new **File policy**.
 
-	> NOTE: Here, select the **Shared Documents** folder from the default SharePoint site.
-	
-		![mt3guvwp.jpg](media/mt3guvwp.jpg)
+    ![New policy](media/info-new-policy.png "New policy")
 
-		![piparayd.jpg](media/piparayd.jpg)
-	1. Verify that you have one selected folder and click on **Done**.
-	
-		![ovruaovh.jpg](media/ovruaovh.jpg)
+3. Provide the following settings to that policy:
 
-		![q67v9yh6.jpg](media/q67v9yh6.jpg)
-	1. In inspection method, select **Data Classification Service**.
-	
-		![7fw3fh7n.jpg](media/7fw3fh7n.jpg)
-	1. Click on sensitive information type, select the **SSN related** ones and click on **Done**.
-	
-		![2plklsza.jpg](media/2plklsza.jpg)
-	1. Click on the **Unmask** checkbox.
-	
-		![a89zd1k2.jpg](media/a89zd1k2.jpg)
-	1. In the Governance actions, select **Apply classification label**.
+    >|||
+    >|---------|---------|
+    >|Policy Name| **Protect SSN documents in sensitive site**|
+    >|Files matching all of the following| **remove the filters** |
+    >|Apply to| **selected folder**|
+    >:memo: Here, select the **Shared Documents** folder from the default SharePoint site.
 
-    >:memo: If you are not able to select Azure Information Protection templates, verify that you configured the integration in the prerequisites section.
+    ![Policy filter](media/info-filter.png "Policy filter")
 
-		![6wfpj4to.jpg](media/6wfpj4to.jpg)
-	1. Click **Create** to finish the policy creation.
+    ![Select folder](media/info-folder.png "Select folder")
+
+4. Verify that you have one selected folder and click on **Done**.
+
+    ![Done](media/info-done.png "Done")
+
+    ![Folder](media/info-folder.png "Folder")
+
+5. In inspection method, select **Data Classification Service**.
+
+    >:memo: [Microsoft Data Classification Service](https://docs.microsoft.com/en-us/cloud-app-security/dcs-inspection) provides a **unified** information protection experience across Office 365, Azure Information Protection, and Microsoft Cloud App Security.
+    >The classification service allows you to extend your data classification efforts to the third-party cloud apps protected by Cloud App Security, using the decisions you already made across an even greater number of apps.
+
+    ![DCS](media/info-dcs.png "DCS")
+
+6. Click on sensitive information type, search and select the **SSN related** ones and click on **Done**.
+
+    ![SSN type](media/info-ssn.png "SSN type")
+
+7. Click on the **Unmask** checkbox.
+
+    ![Unmask](media/info-unmask.png "Unmask")
+
+8. In the Governance actions, click on **Microsoft SharePoint Online** and select **Apply classification label**.
+
+    ![Template](media/info-template.png "Template")
+
+    >:warning: If you are not able to select Azure Information Protection templates, verify that you configured the integration in the prerequisites section or that you waited the 1h for the classifications to sync.
+
+9. Click **Create** to finish the policy creation.
 
 ---
+
 ## Quarantine sensitive PDF for review
 
 [:arrow_up: Top](#Information-protection)
 
-File policies are a great tool for finding threats to your information protection policies, for instance finding places where users stored sensitive information, credit card numbers and third-party ICAP files in your cloud. With Microsoft Cloud App Security, not only can you detect these unwanted files stored in your cloud that leave you vulnerable, but you can take immediate action to stop them in their tracks and lock down the files that pose a threat. Using Admin quarantine, you can protect your files in the cloud and remediate problems, as well as prevent future leaks from occurring.
+File policies are a great tool for finding threats to your information protection policies, for instance finding places where users stored sensitive information, credit card numbers and third-party ICAP files in your cloud. With Cloud App Security, not only can you detect these unwanted files stored in your cloud that leave you vulnerable, but you can take immediate action to stop them in their tracks and lock down the files that pose a threat. Using Admin quarantine, you can protect your files in the cloud and remediate problems, as well as prevent future leaks from occurring.
 This is what we are going to configure in this lab.
 
 1. In Cloud App Security, go to the **Settings**.

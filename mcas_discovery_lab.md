@@ -153,6 +153,7 @@ Those commands download a script installing the Docker engine on your host compu
     >* The docker parameters to configure the log collector container: *docker run ...*
 
 12. Copy the command line provided at the end of the previous step and **minimize** the browser. Open **Putty (64-bit)**. You should have the icon on your desktop.
+
     ![Putty](media/dis-putty.png "Putty")
 
 13. In the PuTTY Configuration window, enter **192.168.141.125** and click **Open**.
