@@ -1,6 +1,6 @@
 # Cloud App Security Discovery lab
 
-[:arrow_left: Home](README.md)
+[:arrow_left: Home](/README.md)
 
 ## Labs
 
@@ -44,7 +44,7 @@ There are several things to test at different locations: in the log collector, i
 1. On **Client01**, open a session on PuTTY to **192.168.141.125** and use the credentials below.
     In the PuTTY Configuration window, enter **192.168.141.125** and click **Open**.
 
-    ![Putty config](media/dis-puttyconfig.png "Putty config")
+    ![Putty config](/media/dis-puttyconfig.png "Putty config")
 
     Log in using the credentials below.
     >|Username|Password|
@@ -59,7 +59,7 @@ There are several things to test at different locations: in the log collector, i
     sudo -i
     docker stats
     ```
-    ![Docker stats](media/dis-dockerstats.png "Docker stats")
+    ![Docker stats](/media/dis-dockerstats.png "Docker stats")
 
      >**INFO:** This command will show you the status of the log collector instance.
 
@@ -70,7 +70,7 @@ There are several things to test at different locations: in the log collector, i
     ``` bash
     docker logs --details LogCollector
     ```
-    ![Docker log](media/dis-dockerlog.png "Docker log")
+    ![Docker log](/media/dis-dockerlog.png "Docker log")
 
      >**INFO:** This command will show you the container logs to verify if it encountered errors when initiating.
 
@@ -90,7 +90,7 @@ There are several things to test at different locations: in the log collector, i
     ll
     ```
 
-    ![adallom folder](media/dis-dockerll.png "adallom folder")
+    ![adallom folder](/media/dis-dockerll.png "adallom folder")
 
     Go to the following folders and review their log files using `more`:
     * **/adallom/ftp/discovery**: this folder contains the data source folders where you send the log files for automated upload. This is also the default folder when logging into the collector with FTP credentials.
@@ -103,22 +103,22 @@ There are several things to test at different locations: in the log collector, i
     tail transfer.log
     ```
 
-    ![FTP logs](media/dis-pureftp.png "FTP logs")
+    ![FTP logs](/media/dis-pureftp.png "FTP logs")
 
 4. Now, move to the **/var/log/adallom** directory.
 
-    ![var log](media/dis-varlog.png "var log")
+    ![var log](/media/dis-varlog.png "var log")
 
     Go to the following folders and review their content and log files using `ll` and `more` or `tail`:
     * **/var/log/adallom/columbus**: this folder is where you will find log files useful for troubleshooting issues with the collector sending files to Cloud App Security. In the **log-archive** folder you can find previous logs compressed as *.tar.gz* files that could be used to send to support for example.
     * **/var/log/adallom/columbusInstaller**: this is where you will investigate issues with the log collector itself. You will find here logs related to the configuration and bootstrapping of the collector. For example, **trace.log** will show you the bootstrapping process:
 
-    ![Bootstrapping log](media/dis-bootstrapping.png "bootstrapping log")
+    ![Bootstrapping log](/media/dis-bootstrapping.png "bootstrapping log")
 
 ### Verify the connectivity between the log collector and Cloud App Security
 
 An easy way to test the connectivity after configuring the log collector is to download a sample of your appliance logs from and use WinSCP to connect to the log collector to upload it and see if it gets uploaded to Cloud App Security, as you did in the previous exercise
 
-![Pending log](media/dis-pending.png "Log pending")
+![Pending log](/media/dis-pending.png "Log pending")
 
 >:memo: **NOTE:**  If the log stays in the source folder for too long, then you know you probably have a connection issue between the log collector and Cloud App Security and should go investigate the logs reviewed previously.

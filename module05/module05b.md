@@ -1,6 +1,6 @@
 # Cloud App Security Discovery lab
 
-[:arrow_left: Home](README.md)
+[:arrow_left: Home](/README.md)
 
 
 ## Labs
@@ -19,7 +19,7 @@ To create snapshot reports:
 
 1. Go to the **Discover** section and click on **Create snapshot report**.
 
-    ![Create snapshot](media/dis-newsnaphsot.png "Create snapshot")
+    ![Create snapshot](/media/dis-newsnaphsot.png "Create snapshot")
 
 2. In the Add data source window, use the settings below (do not close the window yet) and click on **View and verify...**:
 
@@ -30,32 +30,32 @@ To create snapshot reports:
     >|Data Source| **Barracuda - F-Series Firewall**|
     >|Anonymize private information |**Check the box**|
     >
-    ![New snapshot](media/dis-createsnapshot.png "New snapshot")
+    ![New snapshot](/media/dis-createsnapshot.png "New snapshot")
 
 3. In the **Verify your log format** window, click on the **Download sample log** button and save it to your desktop.
 
-    ![Download log](media/dis-downloadlog.png "Download log")
+    ![Download log](/media/dis-downloadlog.png "Download log")
 
 4. Close that window.
 
 5. Click on the **Browse** button and in the new window, select the log you downloaded and click **Open**.
 
-    ![Browse logs](media/dis-browse.png "Browse logs")
+    ![Browse logs](/media/dis-browse.png "Browse logs")
 
-    ![Select logs](media/dis-downloadlog.png "Select logs")
+    ![Select logs](/media/dis-downloadlog.png "Select logs")
 
 6. Now that the log has been selected, click on the **Create** button to create your report.
 
-    ![Create snapshot](media/dis-snapshotcreate.png "Create snapshot")
+    ![Create snapshot](/media/dis-snapshotcreate.png "Create snapshot")
 
 7. Your report will then be processed.
 
-    ![Report processing](media/dis-processing.png "Report processing")
+    ![Report processing](/media/dis-processing.png "Report processing")
 
 8. When your report is ready, you can click on it and start exploring the discovered apps, users, IPs.
 
-    ![Report dashboard](media/dis-dashboard.png "Report dashboard")
+    ![Report dashboard](/media/dis-dashboard.png "Report dashboard")
 
-    ![Report dashboard -risk](media/dis-risk.png "Report dashboard - risk")
+    ![Report dashboard -risk](/media/dis-risk.png "Report dashboard - risk")
 
 ---
