@@ -1,6 +1,6 @@
 # Management
 
-[:arrow_left: Home](./README.md)
+[:arrow_left: Home](/README.md)
 
 ## Labs
 

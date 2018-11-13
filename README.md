@@ -3,8 +3,6 @@
 This lab will guide you through the different Microsoft Cloud App Security (MCAS) capabilities.
 Although some labs are pretty straight forward ,we expect you to already have some basic experience with Cloud App Security or Office 365 management.
 
-
-
 ## Lab environment
 
 ![Lab environment](media/mcaslabenvironment.png "Lab environment")
