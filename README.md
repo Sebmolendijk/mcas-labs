@@ -17,7 +17,7 @@ Although some labs are pretty straight forward ,we expect you to already have so
 
 ## Labs
 
->:warning::warning::warning: Before going to the different labs section, please complete the **[environment preparation](mcas_lab_preparation.md)**. :warning::warning::warning:
+>:warning::warning::warning: Before going to the different labs section, please complete the **[environment preparation](module00/mcas_lab_preparation.md)**. :warning::warning::warning:
 
 The different Cloud App Security capabilities covered in the labs are:
 
@@ -26,7 +26,7 @@ The different Cloud App Security capabilities covered in the labs are:
 * [Module 03 - Information protection](module03/module03.md)
 * [Module 04 - Threat detection](module04/module04.md)
 
-### Optional/follow on on labs
+### Optional/follow on labs
 
 * [Module 05a - Management with PowerShell](module05a/module05a.md)
 * [Module 05b - Cloud Discovery snapshot report](module05b/module05b.md)
