@@ -25,19 +25,14 @@ The different Cloud App Security capabilities covered in the labs are:
 * [Module 02 - Cloud Discovery continuous report](module02/module02.md)
 * [Module 03 - Information protection](module03/module03.md)
 * [Module 04 - Threat detection](module04/module04.md)
+
+### Optional/followon on labs:
+
 * [Module 05a - Management with PowerShell](module05a/module05a.md)
 * [Module 05b - Cloud Discovery snapshot report](module05b/module05b.md)
 * [Module 05c - Log collector troubleshooting](module05b/module05c.md)
 * [Module 05d - Conditional Access App Control](module05b/module05d.md)
 
----
-
-* [Cloud Discovery](mcas_discovery_lab.md)
-* [Threat Detection](mcas_threat_detection_lab.md)
-* [Information Protection](mcas_information_protection_lab.md)
-* [Conditional Access App Control](mcas_app_control_lab.md)
-* [Management](mcas_management_lab.md)
-
->:memo: All the labs are independents from each others and can be taken in any order. Only the **[environment preparation](mcas_lab_preparation.md)** must be complete before starting any lab.
+>:question: If you have questions or want to go further in your Cloud App Security journey, join our **[Tech community](https://techcommunity.microsoft.com/t5/Microsoft-Cloud-App-Security/bd-p/MicrosoftCloudAppSecurity)** !
 
 ---
