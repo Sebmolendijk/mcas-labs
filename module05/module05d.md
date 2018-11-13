@@ -1,5 +1,6 @@
 # Conditional Access App Control
-[🔙](#microsoft-365-cloud-app-security)
+
+[:arrow_left: Home](/README.md)
 
 ### Estimated time to complete
 40 min
@@ -28,7 +29,7 @@ complications.
     1.  In Salesforce, go to **Setup**, search for **My Domain** and
         register a new domain, e.g., ems123456-dev-ed.salesforce.com
 
-        ![f7idpipy.jpg](media/f7idpipy.jpg)
+        ![f7idpipy.jpg](/media/f7idpipy.jpg)
 
     1.  Save **full Salesforce domain name**, including **https://** for the
         next step, e.g., <https://ems123456-dev-ed.salesforce.com>
@@ -78,7 +79,7 @@ complications.
 
     1.   Go back to Salesforce, under **Setup** go to **Single Sign-On
         Settings**
-        ![ao0yrpx8.jpg](media/ao0yrpx8.jpg)
+        ![ao0yrpx8.jpg](/media/ao0yrpx8.jpg)
 
     1.   Click on **Edit**, Select **SAML Enabled**, and click on
         **Save**
@@ -122,7 +123,7 @@ complications.
     1.  Go back to the Azure AD portal, within the **SalesforceCAS**
         app, choose **Users and groups**
         
-		![kscnoob4.jpg](media/kscnoob4.jpg)
+		![kscnoob4.jpg](/media/kscnoob4.jpg)
 
     1.  Click on **+ Add user**, choose the admin as the user (e.g.,
         <admin@ems123456.onmicrosoft.com>), choose **System
@@ -143,7 +144,7 @@ complications.
 
     1. In Azure Active Directory, under **Security**, click
         on **Conditional access**.
-        ![b62lha77.jpg](media/b62lha77.jpg)
+        ![b62lha77.jpg](/media/b62lha77.jpg)
 
     1.   Click on **New policy** and create a new policy:
 
@@ -162,7 +163,7 @@ complications.
         1. Click on **Create**
 
         1. It should look like this:
-            ![qti7w9u6.jpg](media/qti7w9u6.jpg)
+            ![qti7w9u6.jpg](/media/qti7w9u6.jpg)
 
     1.   After the policy was created successfully, open a new browser,
         ***make sure you are logged out***, and log in to
@@ -175,11 +176,11 @@ complications.
 
     1.   Go to the Cloud App Security portal, and under the settings cog
         choose **Conditional Access App Control
-        ![dfmwyegm.jpg](media/dfmwyegm.jpg)
+        ![dfmwyegm.jpg](/media/dfmwyegm.jpg)
 
     1.   You should see a message letting you know that new Azure AD apps
         were discovered. Click on the **View new apps** link.
-        ![qz9mx11x.jpg](media/qz9mx11x.jpg)
+        ![qz9mx11x.jpg](/media/qz9mx11x.jpg)
 
         1. If the message does not appear, go back to step c. (After
             the policy was created...) this time, close the browser and
@@ -187,7 +188,7 @@ complications.
 
     1.   In the dialog that opens, you should see Salesforce. Click on
         the + sign, and then click **Add**.
-        ![iy3f8gro.jpg](media/iy3f8gro.jpg)
+        ![iy3f8gro.jpg](/media/iy3f8gro.jpg)
 
 ### Configure device authentication
 
@@ -197,7 +198,7 @@ complications.
      folder within the **E:\Demofiles.zip** file you've received as the
      certificate authority root certificate
 
-	![rlkp1xvp.jpg](media/rlkp1xvp.jpg)
+	![rlkp1xvp.jpg](/media/rlkp1xvp.jpg)
 ### Create a session policy
 
 1.  In the Cloud App Security portal, select **Control** followed
@@ -206,16 +207,16 @@ complications.
 2.   In the **Policies** page, click **Create policy** and
      select **Session policy**.
 
-     ![6lh61nkl.jpg](media/6lh61nkl.jpg)
+     ![6lh61nkl.jpg](/media/6lh61nkl.jpg)
 
 3.   In the **Session policy** window, assign a name for your policy,
      such as *Block download of sensitive documents to unmanaged
      devices.*
-     ![a6i9js1x.jpg](media/a6i9js1x.jpg)
+     ![a6i9js1x.jpg](/media/a6i9js1x.jpg)
 
 4.   In the **Session control type** field Select **Control file download
      (with DLP)** 
-	 ![j9pxy1lm.jpg](media/j9pxy1lm.jpg)
+	 ![j9pxy1lm.jpg](/media/j9pxy1lm.jpg)
 
 5.   Under **Activity source** in the **Activities matching all of the
      following** section, select the following activity filters to
@@ -224,7 +225,7 @@ complications.
     1. **Device tags** does not equal **Valid client certificate**
 
     2. **App** equals **Salesforce**
-    ![6wwuqlcz.jpg](media/6wwuqlcz.jpg)
+    ![6wwuqlcz.jpg](/media/6wwuqlcz.jpg)
 
 6.   Check the **Enabled** checkbox near **Content inspection**
 
@@ -237,14 +238,14 @@ complications.
 9.   Check the **Don't require relevant context** checkbox, just below
      the dropdown
      menu
-	 ![10uz9qp1.jpg](media/10uz9qp1.jpg)
+	 ![10uz9qp1.jpg](/media/10uz9qp1.jpg)
 
 10.  Under **Actions**, select **Block**
 
 11. Check the **Customize block message** checkbox, and add a custom
      message in the textbox that has opened, e.g.: "This file is
      sensitive"
-    ![dzdsku3w.jpg](media/dzdsku3w.jpg)
+    ![dzdsku3w.jpg](/media/dzdsku3w.jpg)
 
 12.  Click on **Create**
 
@@ -254,7 +255,7 @@ complications.
 14.  In the **Session control type** field Select **Control file download
      (with DLP)** 
 
-	 ![xsznq6n8.jpg](media/xsznq6n8.jpg)
+	 ![xsznq6n8.jpg](/media/xsznq6n8.jpg)
 
 15.  Under **Activity source** in the **Activities matching all of the
      following** section, select the following activity filters to
@@ -264,13 +265,13 @@ complications.
 
  	**App** equals **Salesforce**
 
- 	![8s4bu84k.jpg](media/8s4bu84k.jpg)
+ 	![8s4bu84k.jpg](/media/8s4bu84k.jpg)
 
 16.  Clear the **Enabled** checkbox near **Content inspection**
 
 17.  Under **Actions**, select **Protect**
 
-    ![c5xhnr87.jpg](media/c5xhnr87.jpg)
+    ![c5xhnr87.jpg](/media/c5xhnr87.jpg)
 
 18.  Click on **Create**
 
@@ -297,16 +298,16 @@ complications.
      unmanaged device by clicking on **OK** in one browser and
      **Cancel** in the other.
 
-   ![2mj216sm.jpg](media/2mj216sm.jpg)
+   ![2mj216sm.jpg](/media/2mj216sm.jpg)
 
 7.   You should then see a Monitored access message, click on **Continue
      to Salesforce** to continue.
 
-    ![h2oyt9fw.jpg](media/h2oyt9fw.jpg)
+    ![h2oyt9fw.jpg](/media/h2oyt9fw.jpg)
 
 8.   Now you are logged in to Salesforce. Click on + and go to Files
 
-    ![d0ik67yl.jpg](media/d0ik67yl.jpg)
+    ![d0ik67yl.jpg](/media/d0ik67yl.jpg)
 
 9.  Upload the files **Personal employees information.docx** and
      **Protect with Microsoft Cloud App Security proxy.pdf** from the
@@ -319,7 +320,7 @@ complications.
      that you get a blocking message and instead of the file, you get a
      Blocked...txt file.
 
-   ![wvk16zl2.jpg](media/wvk16zl2.jpg)
+   ![wvk16zl2.jpg](/media/wvk16zl2.jpg)
 
 ### Test the admin experience
 
@@ -330,5 +331,5 @@ complications.
     the file download that was not blocked, and the file download that
     was blocked because it matched the policy.
 
-    ![j0vuo06k.jpg](media/j0vuo06k.jpg)
+    ![j0vuo06k.jpg](/media/j0vuo06k.jpg)
 ---
