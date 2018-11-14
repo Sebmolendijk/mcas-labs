@@ -13,6 +13,21 @@ Although some labs are pretty straight forward ,we expect you to already have so
 
 >:memo: We recommend using the [Cloud App Security documentation](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security "Cloud App Security documentation") to have details on the different use cases, capabilities and configuration steps.
 
+### Portals URLs
+
+* Office 365: https://portal.office.com
+* Cloud App Security: https://portal.cloudappsecurity.com
+* Security & Compliance Center: https://protection.office.com
+* Windows Defender ATP: https://securitycenter.windows.com
+
+### Users
+
+| User          | Username                      | Password       |
+| ----          | --------                      | --------       |
+| Administrator |admin@xyztenant.onmicrosoft.com  | xyz |
+| Adele Vance   |adelev@xyztenant.onmicrosoft.com | xyz |
+| Megan Bowens  |meganb@xyztenant.onmicrosoft.com | xyz |
+
 ---
 
 ## Labs
@@ -28,8 +43,8 @@ The different Cloud App Security capabilities covered in the labs are:
 
 ### Optional/follow on labs
 
-* [Module 05a - Management with PowerShell](module05a/module05a.md)
-* [Module 05b - Cloud Discovery snapshot report](module05b/module05b.md)
+* [Module 05a - Management with PowerShell](module05/module05a.md)
+* [Module 05b - Cloud Discovery snapshot report](module05/module05b.md)
 * [Module 05c - Log collector troubleshooting](module05/module05c.md)
 * [Module 05d - Conditional Access App Control](module05/module05d.md)
 
