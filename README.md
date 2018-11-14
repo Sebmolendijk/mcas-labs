@@ -30,8 +30,8 @@ The different Cloud App Security capabilities covered in the labs are:
 
 * [Module 05a - Management with PowerShell](module05a/module05a.md)
 * [Module 05b - Cloud Discovery snapshot report](module05b/module05b.md)
-* [Module 05c - Log collector troubleshooting](module05b/module05c.md)
-* [Module 05d - Conditional Access App Control](module05b/module05d.md)
+* [Module 05c - Log collector troubleshooting](module05/module05c.md)
+* [Module 05d - Conditional Access App Control](module05/module05d.md)
 
 >:question: If you have questions or want to go further in your Cloud App Security journey, join our **[Tech community](https://techcommunity.microsoft.com/t5/Microsoft-Cloud-App-Security/bd-p/MicrosoftCloudAppSecurity)** !
 

@@ -1,6 +1,6 @@
 # Environment preparation
 
-[:arrow_left: Home](./README.md)
+[:arrow_left: Home](/README.md)
 
 To be able to complete the different parts of the Cloud App Security labs, the following configuration steps are required.
 
