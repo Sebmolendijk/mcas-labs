@@ -4,7 +4,7 @@
 
 ## Labs
 
-- [Manage admin access:](Manage-admin-access) :clock10: 15 min
+- [Manage admin access:](#Manage-admin-accesst) :clock10: 15 min
 
 ---
 
@@ -25,14 +25,14 @@ new administrator.
 
 By following the explanations in the documentation you have to:
 
-1.  Create a new administrator account "mcasAdminUS"
+1. Create a new administrator account "mcasAdminUS"
 
-2.   Create a new Azure AD group "US employees" containing a couple of
+2. Create a new Azure AD group "US employees" containing a couple of
     your test users (not your admin account)
 
-3.   Delegate that group management in MCAS to "mcasAdminUS"
+3. Delegate that group management in MCAS to "mcasAdminUS"
 
-4.   Connect to MCAS with "mcasAdminUS" and compare the activities,
+4. Connect to MCAS with "mcasAdminUS" and compare the activities,
     alerts and actions that this admin can perform
 
 ### Delegate MCAS administration to an external admin

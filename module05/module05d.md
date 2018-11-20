@@ -2,29 +2,42 @@
 
 [:arrow_left: Home](/README.md)
 
-### Estimated time to complete
-40 min
+## Introduction
 
-Please go through all the steps exactly as described to avoid
-complications.
+Conditional Access App Control utilizes a reverse proxy architecture and is uniquely integrated with Azure AD conditional access. Azure AD conditional access allows you to enforce access controls on your organization’s apps based on certain conditions. The conditions define who (for example a user, or group of users) and what (which cloud apps) and where (which locations and networks) a conditional access policy is applied to. After you’ve determined the conditions, you can route users to the Microsoft Cloud App Security where you can protect data with Conditional Access App Control by applying access and session controls.
 
-### Configure Salesforce
+Conditional Access App Control enables user app access and sessions to be monitored and controlled in real time based on access and session policies. Access and session policies are utilized within the Cloud App Security portal to further refine filters and set actions to be taken on a user.
 
-1.  Create a Salesforce developer account
+With the access and session policies, you can:
 
-    1.  On Client01, launch a browser and go to the URL below. 
-	
-		**https://developer.salesforce.com/signup**
+* **Block on download**: You can block the download of sensitive documents. For example, on unmanaged devices.
+* **Protect on download**: Instead of blocking the download of sensitive documents, you can require documents to be protected via encryption on download. This ensures that the document is protected, and user access is authenticated, if the data is downloaded to an untrusted device.
+* **Monitor low-trust user sessions**: Risky users are monitored when they sign into apps and their actions are logged from within the session. You can investigate and analyze user behavior to understand where, and under what conditions, session policies should be applied in the future.
+* **Block access**: You can completely block access to specific apps for users coming from unmanaged devices or from non-corporate networks.
+* **Create read-only mode**: By monitoring and blocking custom in-app activities you can create a read-only mode to specific apps for specific users.
+* **Restrict user sessions from non-corporate networks**: Users accessing a protected app from a location that is not part of your corporate network, are allowed restricted access and the download of sensitive materials is blocked or protected.
 
-    2.   **Important:** Use your admin user as the Email
-        and Username
+>:memo: In this lab, we will only cover some scenarios.
 
-        **Global Admin Username**
+---
 
-    3.   Fill in the rest of details, click Sign me up, accept the
-        verification email, and choose a new password.
+## Federate Salesforce with Azure AD
 
-1.   Configure Salesforce in Azure AD
+>:warning: As Conditional Access App Control requires the protected app to be federated with your IdP (Azure AD in our case), we will first federate Saleforce with our tenant before moving to the controls configuration. Please go through all the steps exactly as described to avoid any complications further in the lab.
+
+1. Create a Salesforce developer account.
+
+    * On Client01, launch a browser and create a Salesforce developer org at this address:[https://developer.salesforce.com/signup][https://developer.salesforce.com/signup].
+      This org (or tenant) will allow you to create a test environment to federate with our Azure AD tenant.
+
+      >:memo: Dev Salesforce orgs are available for free but are deleted after extended periods of inactivity.
+      > :warning: Use your lab tenant admin user as the Email and Username
+
+      ![Dev sign-up](appc-signup.png "Salesforce sig-nup")
+
+    * Fill in the rest of details, click Sign me up, accept the verification email, and choose a new password.
+
+2. Configure Salesforce in Azure AD for single sign-on.
     
     1.  In Salesforce, go to **Setup**, search for **My Domain** and
         register a new domain, e.g., ems123456-dev-ed.salesforce.com
@@ -194,11 +207,12 @@ complications.
 
 1.  Go to the settings cog and choose **Device identification**.
 
-2.   Upload the CASTestCA.crt certificate from the Client Certificate
-     folder within the **E:\Demofiles.zip** file you've received as the
-     certificate authority root certificate
+2.   Upload the CASTestCA.crt certificate from the Client Certificate folder within the **E:\Demofiles.zip** file you've received as the certificate authority root certificate
 
 	![rlkp1xvp.jpg](/media/rlkp1xvp.jpg)
+
+---
+
 ### Create a session policy
 
 1.  In the Cloud App Security portal, select **Control** followed

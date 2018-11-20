@@ -23,6 +23,13 @@ You should find the shortcut on your desktop:
 
 [:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
+As your environments auditing might not be configured yet and will take up to **24h** before being enabled, the alerts related investigations will be performed in the environment provided by your instructor.
+Review the alerts in the environment and investigate to identify the users and the malicious activities performed.
+
+|Portal               |Username                   |Password
+|----------------- |----------------------------------- |---------------------
+| https://portal.cloudappsecurity.com | viewer@emslab.tech |EventP@ssword
+
 ### URLs
 
 * Office 365: https://portal.office.com
@@ -530,12 +537,10 @@ permission level:
 
 ### Investigation in MCAS
 
-Now that we have created those policies, we are going to investigate on
-the alerts.
+Now that we have created those policies, we are going to investigate on the alerts.
+As your environments auditing might not be configured yet and will take up to **24h** before being enabled, those investigations will be performed in the environment provided by your instructor.
+Review the alerts in the environment and investigate to identify the users and the malicious activities performed.
 
-As your environments auditing might not be configured yet and will take
-up to 24h before being enabled, those investigations will be performed
-in the environment provided by your instructor.
-
-Review the alerts in the environment and investigate to identify the
-users and the malicious activities performed.
+|Portal               |Username                   |Password
+|----------------- |----------------------------------- |---------------------
+| https://portal.cloudappsecurity.com | viewer@emslab.tech |EventP@ssword
