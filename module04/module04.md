@@ -402,8 +402,7 @@ Cloud App Security provides by default many [policies templates](https://docs.mi
 
 7. Explore other types of policies and review the proposed templates.
 
-> ## To go further in your Cloud App Security journey, join our [tech community]
-> (https://techcommunity.microsoft.com/t5/Microsoft-Cloud-App-Security/bd-p/MicrosoftCloudAppSecurity) !
+ **To go further in your Cloud App Security journey, join our [tech community](https://techcommunity.microsoft.com/t5/Microsoft-Cloud-App-Security/bd-p/MicrosoftCloudAppSecurity) !**
 
 ---
 

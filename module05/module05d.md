@@ -17,7 +17,7 @@ With the access and session policies, you can:
 * **Create read-only mode**: By monitoring and blocking custom in-app activities you can create a read-only mode to specific apps for specific users.
 * **Restrict user sessions from non-corporate networks**: Users accessing a protected app from a location that is not part of your corporate network, are allowed restricted access and the download of sensitive materials is blocked or protected.
 
->:memo: In this lab, we will only cover some scenarios.
+>:memo: In this lab, we will cover only some scenarios.
 
 ---
 
@@ -27,31 +27,34 @@ With the access and session policies, you can:
 
 1. Create a Salesforce developer account.
 
-    * On Client01, launch a browser and create a Salesforce developer org at this address:[https://developer.salesforce.com/signup][https://developer.salesforce.com/signup].
+    * On Client01, launch a browser and create a Salesforce developer org at this address: [https://developer.salesforce.com/signup](https://developer.salesforce.com/signup).
       This org (or tenant) will allow you to create a test environment to federate with our Azure AD tenant.
 
       >:memo: Dev Salesforce orgs are available for free but are deleted after extended periods of inactivity.
+      >
       > :warning: Use your lab tenant admin user as the Email and Username
 
-      ![Dev sign-up](appc-signup.png "Salesforce sig-nup")
+      ![Dev sign-up](/media/appc-signup.png "Salesforce sign-up")
 
     * Fill in the rest of details, click Sign me up, accept the verification email, and choose a new password.
 
 2. Configure Salesforce in Azure AD for single sign-on.
-    
-    1.  In Salesforce, go to **Setup**, search for **My Domain** and
-        register a new domain, e.g., ems123456-dev-ed.salesforce.com
 
-        ![f7idpipy.jpg](/media/f7idpipy.jpg)
+    * In Salesforce, go to **Setup**, search for **My Domain** and register a new domain matching your Office 365 domain, e.g., **ems123456-dev-ed.salesforce.com**
 
-    1.  Save **full Salesforce domain name**, including **https://** for the
-        next step, e.g., <https://ems123456-dev-ed.salesforce.com>
+        ![My domain](/media/sf-mydomain.png "My domain")
 
-    1.   Go to **https://portal.azure.com** logging in with the credentials below:
+        ![My domain](/media/sf-registerdomain.png "My domain")
 
-		**Global Admin Username**
+        ![My domain](/media/sf-registerdomain2.png "My domain")
 
-		**Global Admin Password**
+    * Save **full Salesforce domain name**, including **https://** for the next step, e.g., **https://ems123456-dev-ed.salesforce.com**
+        ![My domain](/media/sf-registerdomain3.png "My domain")
+
+    * Go to **https://portal.azure.com** with the credentials below:
+
+        **Global Admin Username**
+        **Global Admin Password**
 	
 	1.   Go to **Azure Active
         Directory**, click on **Enterprise applications**, choose **+
@@ -291,6 +294,8 @@ With the access and session policies, you can:
 
 19.  Disable this policy
 
+ ---
+
 ### Test the user experience
 
 1.  Extract the file **silvia.pfx** from the **Client Certificate**
@@ -335,6 +340,8 @@ With the access and session policies, you can:
      Blocked...txt file.
 
    ![wvk16zl2.jpg](/media/wvk16zl2.jpg)
+
+---
 
 ### Test the admin experience
 

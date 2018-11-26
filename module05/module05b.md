@@ -2,7 +2,6 @@
 
 [:arrow_left: Home](/README.md)
 
-
 ## Labs
 
 * [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
