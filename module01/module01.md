@@ -38,6 +38,7 @@ In this lab, we are going to delegate the management of US employees to a new ad
     ![Import group](/media/mgmt-import4.png "Import group")
 
 4. In the [Cloud App Security portal](https://portal.cloudappsecurity.com), add **mcasAdminUS** as **User group admin** for the **US employees** group.
+
     ![New admin](/media/mgmt-admin1.png "New admin")
 
     ![New admin](/media/mgmt-admin2.png "New admin")
@@ -48,15 +49,36 @@ In this lab, we are going to delegate the management of US employees to a new ad
 
     ![New admin](/media/mgmt-admin5.png "New admin")
 
-5. Open a new **private** tab and connect to the [Cloud App Security portal](https://portal.cloudappsecurity.com) with "mcasAdminUS" and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
+5. Open a new **private** tab and connect to the [Cloud App Security portal](https://portal.cloudappsecurity.com) with **mcasAdminUS** and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
 
 ---
 
 ## Delegate MCAS administration to an external admin
 
-As a Managed Security Service Providers (MSSPs), you are asked by your
-customer how you could access their environment to manage their alerts
-in the Cloud App Security portal.
+As a **Managed Security Service Providers** (MSSPs), you are asked by your customer how you could access their environment to manage their alerts in the Cloud App Security portal.
+In this lab, we will see how to answer to that question.
+As the MCAS admin for your company, work with the person next to you to configure an external access for the Managed Security Service Provider to another MCAS tenant.
 
-As the MCAS admin for your company, work with the person next to you to
-configure an external access for the Managed Security Service Provider.
+1. In the [Cloud App Security portal](https://portal.cloudappsecurity.com), add the external MCAS admin as **Security reader** in your MCAS tenant.
+
+    ![External admin](/media/mgmt-admin1.png "External admin")
+
+    ![External admin](/media/mgmt-admin2.png "External admin")
+
+    ![External admin](/media/mgmt-admin3.png "External admin")
+
+    ![External admin](/media/mgmt-admin4.png "External admin")
+
+    ![External admin](/media/mgmt-externaladmin1.png "External admin")
+
+    > :memo: Note here that the icon next to the newly added admin shows that the user is external to the company.
+
+    ![External admin](/media/mgmt-externaladmin2.png "External admin")
+
+2. After adding the external admin, **log off** and log on again from Cloud App Security.
+
+    ![Log off](/media/mgmt-switch1.png "Log off")
+
+3. Switch to the external Cloud App Security tenant where you have been added as an external admin and look at the actions you can perform.
+
+    ![Switch](/media/mgmt-switch2.png "Switch")
