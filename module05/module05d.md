@@ -196,7 +196,7 @@ The next step of the configuration is to create a Conditional access policy in A
 
 2. Click on **New policy** and create a new policy.
 
-![Configure policy](/media/appc-policy2.png "Configure policy")
+    ![Configure policy](/media/appc-policy2.png "Configure policy")
 
 3. Use the following settings in your policy.
 
@@ -223,24 +223,37 @@ The next step of the configuration is to create a Conditional access policy in A
 
     ![Configure policy](/media/appc-policy8.png "Configure policy")
 
-    You should see a message letting you know that new Azure AD apps were discovered. Click on the **View new apps** link.
-        ![qz9mx11x.jpg](/media/qz9mx11x.jpg)
+    You should see know that Salesforce has been discovered and need to continue the setup.
 
-        1. If the message does not appear, go back to step c. (After
-            the policy was created...) this time, close the browser and
-            open a new browser in Incognito mode.
+    ![Configure policy](/media/appc-policy9.png "Configure policy")
 
-    1.   In the dialog that opens, you should see Salesforce. Click on
-        the + sign, and then click **Add**.
-        ![iy3f8gro.jpg](/media/iy3f8gro.jpg)
+    >:warning: If the message does not appear, go back to step 5. (After the policy was created...) this time, close the browser and open a new browser in Incognito mode.
+
+    In the dialog that opens, click on **Add**.
+
+    ![Configure policy](/media/appc-policy10.png "Configure policy")
+
+    ![Configure policy](/media/appc-policy11.png "Configure policy")
+
+    The deployment is now **complete**!
+
+---
 
 ### Configure device authentication
 
-1.  Go to the settings cog and choose **Device identification**.
+Conditional Access App Control is capable to identify company devices using either Azure AD, Intune or certificates (provided by 3rd party MDM for example). We will here simulate the 3rd party MDM scenario, using client certificates.
 
-2.   Upload the CASTestCA.crt certificate from the Client Certificate folder within the **E:\Demofiles.zip** file you've received as the certificate authority root certificate
+1. Go to the settings and at the bottom of the page, choose **Device identification**.
 
-	![rlkp1xvp.jpg](/media/rlkp1xvp.jpg)
+    ![Device authentication](/media/appc-device1.png "Device authentication")
+
+2. Click on the **Browse** button and upload the **CASTestCA.crt** certificate from the **Client Certificate** folder within the **Demofiles.zip** file you've received as the certificate authority root certificate.
+
+    ![Device authentication](/media/appc-device2.png "Device authentication")
+
+    ![Device authentication](/media/appc-device3.png "Device authentication")
+
+    ![Device authentication](/media/appc-device4.png "Device authentication")
 
 ---
 
