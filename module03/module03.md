@@ -1,6 +1,6 @@
 # Information protection
 
-[:arrow_left: Home](./README.md)
+[:arrow_left: Home](/README.md)
 
 In a perfect world, all your employees understand the importance of information protection and work within your policies. But in a real world, it's probable that a partner who works with accounting uploads a document to your Box repository with the wrong permissions, and a week later you realize that your enterprise's confidential information was leaked to your competition.
 Microsoft Cloud App Security helps you prevent this kind of disaster before it happens.
