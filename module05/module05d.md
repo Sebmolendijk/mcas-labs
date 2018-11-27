@@ -271,7 +271,7 @@ To control our users sessions to Salesforce, we have now to create a **policy**.
 
 3. In the **Session policy** window, assign a name for your policy, such as **Block download of sensitive documents to unmanaged devices** and in the **Session control type** field, select **Control file download (with DLP)**
 
- ![Session policy](/media/appc-session3.png "Session policy")
+     ![Session policy](/media/appc-session3.png "Session policy")
 
 4. Under **Activity source** in the **Activities matching all of the following** section, select the following activity filters to apply to the policy:
 
@@ -304,56 +304,45 @@ To control our users sessions to Salesforce, we have now to create a **policy**.
 
 10. Check the **Enabled** checkbox near **Content inspection**. Under **Actions**, select **Protect**
 
-    ![c5xhnr87.jpg](/media/c5xhnr87.jpg)
+    ![Session policy](/media/appc-session9.png "Session policy")
 
-18.  Click on **Create**
+11. Click on **Create**
 
-19.  Disable this policy
+12. Disable this policy
 
  ---
 
 ### Test the user experience
 
-1.  Extract the file **silvia.pfx** from the **Client Certificate**
-     folder in **Demo files.zip** file you've received
+1. Extract the file **silvia.pfx** from the **Client Certificate** folder in **Demo files.zip** file you've received
 
-2.   Double click on the **silvia.pfx** file, click **Next**, **Next**,
-     enter the password **acme**, click **Next**, **Next**, **Finish**.
+2. Double click on the **silvia.pfx** file, click **Next**, **Next**, enter the password **acme**, click **Next**, **Next**, **Finish**.
 
-3.   Open a new browser in an Incognito mode
+3. Open a new browser in an Incognito mode
 
-4.   Go to <https://myapps.microsoft.com> and login with the admin user
+4. Go to [https://myapps.microsoft.com](https://myapps.microsoft.com) and login with the admin user.
 
-5.   Click on the **SalesforceCAS** tile
+5. Click on the **SalesforceCAS** icon.
 
-6.   You should now see a certificate prompt. Click on **Cancel**.
+6. You should now see a certificate prompt. Click on **Cancel**.
 
-     **In a real demo**, you can open two different browsers,
-     side by side, and show the user experience from a managed and
-     unmanaged device by clicking on **OK** in one browser and
-     **Cancel** in the other.
+    >:memo: This will simulate a connection from an unmannaged device. **In a real demo**, you can open two different browsers, side by side, and show the user experience from a managed and unmanaged device by clicking on **OK** in one browser and **Cancel** in the other.
 
-   ![2mj216sm.jpg](/media/2mj216sm.jpg)
+   ![Session policy](/media/appc-session10.png "Session policy")
 
-7.   You should then see a Monitored access message, click on **Continue
-     to Salesforce** to continue.
+7. You should then see a Monitored access message, click on **Continue to Salesforce** to continue.
 
-    ![h2oyt9fw.jpg](/media/h2oyt9fw.jpg)
+    ![Session policy](/media/appc-session11.png "Session policy")
 
-8.   Now you are logged in to Salesforce. Click on + and go to Files
+8. Now you are logged in to Salesforce. Click on + and go to Files
 
     ![d0ik67yl.jpg](/media/d0ik67yl.jpg)
 
-9.  Upload the files **Personal employees information.docx** and
-     **Protect with Microsoft Cloud App Security proxy.pdf** from the
-     **Demo files.zip** file to the Files page in Salesforce
+9. Upload the files **Personal employees information.docx** and **Protect with Microsoft Cloud App Security proxy.pdf** from the **Demo files.zip** file to the Files page in Salesforce
 
-10.  Download the **Protect with Microsoft Cloud App Security proxy.pdf**
-     files and see that it is downloaded, and you can open it.
+10. Download the **Protect with Microsoft Cloud App Security proxy.pdf** files and see that it is downloaded, and you can open it.
 
-11. Download the **Personal employees information.docx** file and see
-     that you get a blocking message and instead of the file, you get a
-     Blocked...txt file.
+11. Download the **Personal employees information.docx** file and see that you get a blocking message and instead of the file, you get a **Blocked...txt** file.
 
    ![wvk16zl2.jpg](/media/wvk16zl2.jpg)
 
@@ -361,12 +350,10 @@ To control our users sessions to Salesforce, we have now to create a **policy**.
 
 ### Test the admin experience
 
-1.  Go back to the Cloud App Security portal, and under **Investigate**
-    choose **Activity log**
+1. Go back to the Cloud App Security portal, and under **Investigate**  choose **Activity log**
 
-2.   See the login activity that was redirected to the session control,
-    the file download that was not blocked, and the file download that
-    was blocked because it matched the policy.
+2. See the login activity that was redirected to the session control, the file download that was not blocked, and the file download that was blocked because it matched the policy.
 
     ![j0vuo06k.jpg](/media/j0vuo06k.jpg)
+
 ---
