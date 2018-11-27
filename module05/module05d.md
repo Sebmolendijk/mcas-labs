@@ -138,83 +138,49 @@ With the access and session policies, you can:
 
     ![Add SF](/media/appc-app17.png "Add SF")
 
+13. Go back to **My Domain** in Salesforce and in **Authentication Configuration**, click on **Edit**. You will be redirected to another page.
 
+    ![Add SF](/media/appc-app18.png "Add SF")
 
-    1.   Click on **Save**
+14. In **Authentication Configuration**, un-check the **Login Page** checkbox and check the **Azure AD** checkbox. Click on Save.
 
-    1.  Click on **Configure Salesforce** which will open a new blade
+    ![Add SF](/media/appc-app19.png "Add SF")
 
-    1.   Scroll down to the **Quick Reference** section
+    ![Add SF](/media/appc-app20.png "Add SF")
 
-        1. **Download the Azure AD Signing Certificate**
+---
 
-        1.  Copy all the other fields in the Quick Reference section for
-            the next step in Salesforce
+## Deploy Salesforce to your users
 
-    1.   Go back to Salesforce, under **Setup** go to **Single Sign-On
-        Settings**
-        ![ao0yrpx8.jpg](/media/ao0yrpx8.jpg)
+We will now provide access to our users and validate the SSO experience.
 
-    1.   Click on **Edit**, Select **SAML Enabled**, and click on
-        **Save**
+1. Go back to the Azure AD portal, within the **SalesforceCAS** app and choose **Users and groups**
 
-    1.   In the same **Single Sign-On Settings** page, click on **New**
+    ![Assign users](/media/appc-app21.png "Assign users")
 
-    1.  Fill in the following fields:
+2. Click on **+ Add user**. Choose your admin account as the user (e.g.,admin@ems123456.onmicrosoft.com) and select **System Administrator** as the Role. Click on **Assign**
 
-        1. **Name**: write "Azure AD"
+    ![Assign users](/media/appc-app22.png "Assign users")
 
-        1. **Issuer**: Copy and paste the **Azure AD SAML Entity ID**
-            from the Azure AD **Quick Reference** section
+    ![Assign users](/media/appc-app23.png "Assign users")
 
-        1. **Entity ID**: The full Salesforce domain, e.g.,
-            <https://ems123456-dev-ed.salesforce.com>
+    ![Assign users](/media/appc-app24.png "Assign users")
 
-        1. **Identity Provider Certificate**: upload the certificate
-            you've downloaded from Azure AD (**Download Azure AD Signing
-            Certificate**)
+    ![Assign users](/media/appc-app24.png "Assign users")
 
-        1.  **Identity Provider Login URL**: Copy and paste the **Azure
-            AD Single Sign-On Service URL** from the Azure AD **Quick
-            Reference** section
+    >:warning: If you want to assign Salesforce to more users, you must create a user for them in Salesforce as we didn't configured **provisionning**. Our admin account already has an an account matching his UPN, created during the Salesforce configuration.
 
-        1. **Custom Logout URL**: Copy and paste the **Azure AD Sign
-            Out URL** from the Azure AD **Quick Reference** section
+3. Test the setup by going to [https://myapps.microsoft.com](https://myapps.microsoft.com) with your admin account and click on the **SalesforceCAS** app.
 
-    1.  Click **Save**
+    ![Test SSO](/media/appc-app25.png "Test SSO")
 
-    1.  Go back to **My Domain** in Salesforce
+    ![Test SSO](/media/appc-app26.png "Test SSO")
 
-    1.  Under **Authentication Configuration** click Edit, (click
-        **Open** if needed), and:
-
-        1. Uncheck the **Login Page** checkbox
-
-        1. Check the **Azure AD** checkbox
-
-        1. Click on **Save**
-
-    1.  Go back to the Azure AD portal, within the **SalesforceCAS**
-        app, choose **Users and groups**
-        
-		![kscnoob4.jpg](/media/kscnoob4.jpg)
-
-    1.  Click on **+ Add user**, choose the admin as the user (e.g.,
-        <admin@ems123456.onmicrosoft.com>), choose **System
-        Administrator** as the Role, and click on **Assign**
-
-    1.   Test the setup by going to <https://myapps.microsoft.com>,
-        logging in with the credentials below:
-
-		**Global Admin Username**
-
-		**Global Admin Password**
-	
 		Click on the
         **SalesforceCAS**, verifying that this will result in a
         successful login to Salesforce.
 
-1.   Deploy the proxy for Salesforce
+### Deploy the reverse proxy for Salesforce
 
     1. In Azure Active Directory, under **Security**, click
         on **Conditional access**.
