@@ -142,11 +142,15 @@ With the access and session policies, you can:
 
     ![Add SF](/media/appc-app18.png "Add SF")
 
-14. In **Authentication Configuration**, un-check the **Login Page** checkbox and check the **Azure AD** checkbox. Click on Save.
+14. In **Authentication Configuration**, un-check the **Login Page** checkbox and check the **Azure AD** checkbox. Click on Save. When back on the configuration page, click on the **login** button to complete the configuration.
 
     ![Add SF](/media/appc-app19.png "Add SF")
 
     ![Add SF](/media/appc-app20.png "Add SF")
+
+    ![Add SF](/media/appc-app20a.png "Add SF")
+
+    ![Add SF](/media/appc-app20b.png "Add SF")
 
 ---
 
@@ -170,56 +174,56 @@ We will now provide access to our users and validate the SSO experience.
 
     >:warning: If you want to assign Salesforce to more users, you must create a user for them in Salesforce as we didn't configured **provisionning**. Our admin account already has an an account matching his UPN, created during the Salesforce configuration.
 
-3. Test the setup by going to [https://myapps.microsoft.com](https://myapps.microsoft.com) with your admin account and click on the **SalesforceCAS** app.
+3. Test the setup by going to [https://myapps.microsoft.com](https://myapps.microsoft.com) with your admin account and click on the **SalesforceCAS** app. You should then experience SSO to Salesforce.
 
     ![Test SSO](/media/appc-app25.png "Test SSO")
 
     ![Test SSO](/media/appc-app26.png "Test SSO")
 
-		Click on the
-        **SalesforceCAS**, verifying that this will result in a
-        successful login to Salesforce.
+    :warning: If you receive an error message, verify that you validated the SSO configuration by clicking on the **Log in** button in **step 14**.
 
-### Deploy the reverse proxy for Salesforce
+---
 
-    1. In Azure Active Directory, under **Security**, click
-        on **Conditional access**.
-        ![b62lha77.jpg](/media/b62lha77.jpg)
+## Deploy the reverse proxy capability for Salesforce
 
-    1.   Click on **New policy** and create a new policy:
+The next step of the configuration is to create a Conditional access policy in Azure AD and then complete the configuration in Cloud App Security.
 
-        1. Name the policy: Test Cloud App Security proxy
+>:memo: Soon, you will be able to perform the full configuration from the Azure AD conditional access policy configuration pane.
 
-        1. Choose the admin as the user (e.g.,
-            <admin@ems123456.onmicrosoft.com>)
+1. In Azure Active Directory, under **Security**, click on **Conditional access**.
 
-        1. Choose SalesforceCAS as the app
+    ![Configure policy](/media/appc-policy1.png "Configure policy")
 
-        1.  Under **Session** you select **Use proxy enforced
-            restrictions**.
+2. Click on **New policy** and create a new policy.
 
-        1. Set **Enable policy** to be **On**
+![Configure policy](/media/appc-policy2.png "Configure policy")
 
-        1. Click on **Create**
+3. Use the following settings in your policy.
 
-        1. It should look like this:
-            ![qti7w9u6.jpg](/media/qti7w9u6.jpg)
+    **Name**: Test Cloud App Security proxy
+    **Assignment**: choose your admin
+    **Cloud apps**: SalesforceCAS
+    **Access control / Session**: Use Conditional Access App Control **checkbox**
 
-    1.   After the policy was created successfully, open a new browser,
-        ***make sure you are logged out***, and log in to
-        SalesforceCAS with the admin user
+    ![Configure policy](/media/appc-policy3.png "Configure policy")
 
-        1. You can go to **https://myapps.microsoft.com** and click on
-            the SalesforceCAS tile
+    ![Configure policy](/media/appc-policy4.png "Configure policy")
 
-        1.  Make sure you've successfully logged on to Salesforce
+    ![Configure policy](/media/appc-policy5.png "Configure policy")
 
-    1.   Go to the Cloud App Security portal, and under the settings cog
-        choose **Conditional Access App Control
-        ![dfmwyegm.jpg](/media/dfmwyegm.jpg)
+4. Enable your policy and click on **Create**
 
-    1.   You should see a message letting you know that new Azure AD apps
-        were discovered. Click on the **View new apps** link.
+    ![Configure policy](/media/appc-policy6.png "Configure policy")
+
+    ![Configure policy](/media/appc-policy7.png "Configure policy")
+
+5. After the policy was created successfully, open a new browser, ***make sure you are logged out***, go to [https://myapps.microsoft.com](https://myapps.microsoft.com), connect with the admin user and click on the SalesforceCAS tile.
+
+6. Go back to the Cloud App Security portal, and under the settings cog choose **Conditional Access App Control**.
+
+    ![Configure policy](/media/appc-policy8.png "Configure policy")
+
+    You should see a message letting you know that new Azure AD apps were discovered. Click on the **View new apps** link.
         ![qz9mx11x.jpg](/media/qz9mx11x.jpg)
 
         1. If the message does not appear, go back to step c. (After
