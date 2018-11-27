@@ -9,7 +9,6 @@
 | Adele Vance   |adelev@xyztenant.onmicrosoft.com | xyz |
 | Megan Bowens  |meganb@xyztenant.onmicrosoft.com | xyz |
 
-
 Cloud App Security provides several [threats detection
 policies](https://docs.microsoft.com/en-us/cloud-app-security/anomaly-detection-policy)
 using machine learning and **user behavior analytics** to detect

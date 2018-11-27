@@ -7,8 +7,8 @@ Although some labs are pretty straight forward ,we expect you to already have so
 
 ![Lab environment](media/mcaslabenvironment.png "Lab environment")
 
-* Client01 is a Windows 10 VM that will be used to access Office 365 and Cloud app Security management consoles and configure the log collector running on LinuxVM, using Putty.
-* LinuxVM is an Ubuntu 18.04 computer on which we install Docker to run the Cloud App Security Discovery log collector.
+* **Client01** is a Windows 10 VM that will be used to access Office 365 and Cloud app Security management consoles and configure the log collector running on LinuxVM, using Putty.
+* **LinuxVM** is an Ubuntu 18.04 computer on which we install Docker to run the Cloud App Security Discovery log collector.
 * Office 365 and Cloud App Security are test tenants for the labs.
 
 >:memo: We recommend using the [Cloud App Security documentation](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security "Cloud App Security documentation") to have details on the different use cases, capabilities and configuration steps.
