@@ -92,7 +92,53 @@ With the access and session policies, you can:
 
     ![Add SF](/media/appc-app10.png "Add SF")
 
-8. Go back to the **Salesforce admin page**.
+8. Go back to the **Salesforce admin page** and go to the **Signle sign-on** settings. There, click on the **Edit** button.
+
+    ![Add SF](/media/appc-app11.png "Add SF")
+
+9. Enable single sign-on using SAML and click on the **Save** button.
+
+    ![Add SF](/media/appc-app12.png "Add SF")
+
+10. Back on the configuration page, under **SAML Single Sign-On Settings**, click on **New**.
+
+    ![Add SF](/media/appc-app13.png "Add SF")
+
+    We will now configure those settings using the information provided in the **Azure AD portal**.
+
+    ![Add SF](/media/appc-app14.png "Add SF")
+
+11. For the configuration, you will have to use the information provided at the bottom of the Azure AD **Configure sign-on** pane. Scroll down until you reach the **Quick reference** section.
+
+    ![Add SF](/media/appc-app15.png "Add SF")
+
+12. Copy/paste the information from the **Quick reference** to the Salesforce **single sign-on settings** page.
+
+    a.In the Name textbox, type the name of the configuration: **AzureAD**.
+
+    b. Paste **Azure AD SAML Entity ID** value into the **Issuer** textbox.
+
+    c. In the **Entity Id** textbox, type in the **Sign On URL** that you entered in **Step 1**, which should be in this format: **http://company.my.salesforce.com**
+
+    d. Download the **Azure AD Signing Certificate** in the Azure portal and then click **Browse** to upload the downloaded certificate Azure AD Signing Certificate in the **Salesforce setting page**.
+
+    e. As **SAML Identity Type**, select **Assertion contains the Federation ID** from the User object.
+
+    f. As **SAML Identity Location**, select **Identity is in the NameIdentifier element of the Subject statement**.
+
+    g. Paste **Azure AD Single Sign-On Service URL** into the **Identity Provider Login URL** textbox.
+
+    h. Salesforce does not support SAML logout. As a workaround, paste **Azure AD Sign Out URL** into the **Identity Provider Logout URL** textbox.
+
+    i. As **Service Provider Initiated Request Binding**, select **HTTP POST**.
+
+    j. Click Save.
+
+    ![Add SF](/media/appc-app16.png "Add SF")
+
+    ![Add SF](/media/appc-app17.png "Add SF")
+
+
 
     1.   Click on **Save**
 
