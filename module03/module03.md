@@ -26,7 +26,7 @@ We will apply an Azure Information Protection template on documents containing s
 
 2. Create a new **File policy**.
 
-    ![New policy](/media/info-new-policy.png "New policy")
+    ![New policy](/media/info-newpolicy.png "New policy")
 
 3. Provide the following settings to that policy:
 
@@ -81,29 +81,43 @@ This is what we are going to configure in this lab.
 
 1. In Cloud App Security, go to the **Settings**.
 
-	![oqfkh5cw.jpg](/media/oqfkh5cw.jpg)
-2.  In the Information Protection section, go to **Admin quarantine**.
+    ![Settings](/media/info-settings.png)
 
-	![pvjk90y0.jpg](/media/pvjk90y0.jpg)
-3.  In the dropdown menu, select your root SharePoint site.
+2. In the Information Protection section, go to **Admin quarantine**.
 
-	1. In user notification, type **Your content has been quarantined. Please contact your admin.**
-	1. Click on the Save button.
+    ![Settings admin quarantine](/media/info-adminq1.png "Settings admin quarantine")
+
+3. Configure **Admin quarantine**.
+
+    * In the dropdown menu, select your root SharePoint site.
+
+    ![Settings admin quarantine site](/media/info-adminq2.png "Settings admin quarantine site")
 
     >:memo: As best practice, you should create and use a **dedicated** site with restricted access as the admin quarantine location.
 
-	![hl55gqvd.jpg](/media/hl55gqvd.jpg)
-4.  Next, go to the policies menu and create a new **file policy**.
+    * In user notification, type **Your content has been quarantined. Please contact your admin.** and click on the **Save** button.
 
-	![3xpu3nw7.jpg](/media/3xpu3nw7.jpg)
-5.  Provide the following settings to that policy:
-	1. Policy name: **Quarantine sensitive pdf**
-	1. Files matching all of the following: **Extension equals pdf**
-	
-	![2cmlwt55.jpg](/media/2cmlwt55.jpg)
-	1. In Governance actions, select **Put in admin quarantine** and click on the Create button.
-	
-	![1wlrz08d.jpg](/media/1wlrz08d.jpg)
+    ![Settings admin quarantine message](/media/info-adminq3.png "Settings admin quarantine message")
+
+    >:memo: This message will be provided in the placeholders when a file is put in quarantine.
+
+4. Next, go to the policies menu and create a new **file policy**. The policy is the component that will decide which files should be put in quarantine.
+
+    ![Policies](/media/info-policy1.png "Policies")
+
+    ![New policy](/media/info-policy2.png "New policy")
+
+5. Provide the following settings to that policy:
+
+    >|Policy name|Files matching all of the following|
+    >|---------|---------|
+    >|**Quarantine sensitive pdf**| **Extension equals pdf**|
+
+    ![New policy](/media/info-policy3.png "New policy")
+
+6. Check the **Create an alert for each matching file** checkbox. In Governance actions of the policy, select **Put in admin quarantine** for OneDrive and SharePoint and click on the **Create** button.
+
+    ![New policy](/media/info-policy3.png "New policy")
 
 ---
 
