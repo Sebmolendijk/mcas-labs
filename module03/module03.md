@@ -149,7 +149,7 @@ To test our files policies, perform the following tasks:
 
 4. Cloud App Security will now scan those documents and search for matches to our created policies.
 
-    >:memo: The scan can take **some minutes** before completion.
+    >:memo: The scan can take **several minutes** before completion.
 
 5. To monitor the evolution of the scan, go back to Cloud App Security and open the **Files** page of the investigations.
 
@@ -169,18 +169,18 @@ To test our files policies, perform the following tasks:
 
     ![Policy match](/media/rqbu6yyq.jpg "Policy match")
 
-9. You can also view the related governance actions, like applying the Azure Information classification or moving the file to the quarantine folder, in the **Governance log**.
+9. You can also view the related governance actions, like applying the Azure Information classification or moving the file to the quarantine folder, at the file level or in the **Governance log**.
+
+    ![File governance](/media/bg5romej.jpg "File governance")
 
     ![Governance log](/media/info-governance.png "Governance log")
 
-    ![bg5romej.jpg](/media/bg5romej.jpg)
-
-    ![fbsrlfsk.jpg](/media/fbsrlfsk.jpg)
+    ![Governance action](/media/fbsrlfsk.jpg "Governance action")
 
 10. If you go back to the **Contoso Team Site**, you will also notice that the quarantined files will be replaced by placeholders containing your custom message. The original file will be moved to the "Quarantine" location we defined in the settings.
 
-    ![as3niznc.jpg](/media/as3niznc.jpg)
+    ![Site](/media/as3niznc.jpg "Site")
 
-    ![juas1s58.jpg](/media/juas1s58.jpg)
+    ![Placeholder](/media/juas1s58.jpg "Placeholder")
 
-    ![drm0yj0c.jpg](/media/drm0yj0c.jpg)
+    ![Quarantine](/media/drm0yj0c.jpg "Quarantine")
