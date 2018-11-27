@@ -259,75 +259,50 @@ Conditional Access App Control is capable to identify company devices using eith
 
 ### Create a session policy
 
-1.  In the Cloud App Security portal, select **Control** followed
-     by **Policies**.
+To control our users sessions to Salesforce, we have now to create a **policy**.
 
-2.   In the **Policies** page, click **Create policy** and
-     select **Session policy**.
+1. In the Cloud App Security portal, select **Control** followed by **Policies**.
 
-     ![6lh61nkl.jpg](/media/6lh61nkl.jpg)
+    ![Session policy](/media/appc-session1.png "Session policy")
 
-3.   In the **Session policy** window, assign a name for your policy,
-     such as *Block download of sensitive documents to unmanaged
-     devices.*
-     ![a6i9js1x.jpg](/media/a6i9js1x.jpg)
+2. In the **Policies** page, click **Create policy** and select **Session policy**.
 
-4.   In the **Session control type** field Select **Control file download
-     (with DLP)** 
-	 ![j9pxy1lm.jpg](/media/j9pxy1lm.jpg)
+    ![Session policy](/media/appc-session2.png "Session policy")
 
-5.   Under **Activity source** in the **Activities matching all of the
-     following** section, select the following activity filters to
-     apply to the policy:
+3. In the **Session policy** window, assign a name for your policy, such as **Block download of sensitive documents to unmanaged devices** and in the **Session control type** field, select **Control file download (with DLP)**
 
-    1. **Device tags** does not equal **Valid client certificate**
+ ![Session policy](/media/appc-session3.png "Session policy")
 
-    2. **App** equals **Salesforce**
-    ![6wwuqlcz.jpg](/media/6wwuqlcz.jpg)
+4. Under **Activity source** in the **Activities matching all of the following** section, select the following activity filters to apply to the policy:
 
-6.   Check the **Enabled** checkbox near **Content inspection**
+    **Device tags** does not equal **Valid client certificate**
+    **App** equals **Salesforce**
+    Check the **Enabled** checkbox near **Content inspection**
 
-7.   Check the **Include files that match a preset expression** radio
-     button
+    ![Session policy](/media/appc-session4.png "Session policy")
 
-8.   In the dropdown menu just below the radio button, scroll all the way
-     to the end to choose **US: PII: Social security number**
+5. Check the **Include files that match a preset expression** radio button. In the dropdown menu just below the radio button, scroll all the way to the end to choose **US: PII: Social security number** and check the **Don't require relevant context** checkbox, just below the dropdown menu.
 
-9.   Check the **Don't require relevant context** checkbox, just below
-     the dropdown
-     menu
-	 ![10uz9qp1.jpg](/media/10uz9qp1.jpg)
+    ![Session policy](/media/appc-session5.png "Session policy")
 
-10.  Under **Actions**, select **Block**
+6. Under **Actions**, select **Block**. Check the **Customize block message** checkbox, and add a custom message in the textbox that has opened, e.g.: "This file is sensitive"
 
-11. Check the **Customize block message** checkbox, and add a custom
-     message in the textbox that has opened, e.g.: "This file is
-     sensitive"
-    ![dzdsku3w.jpg](/media/dzdsku3w.jpg)
+    ![Session policy](/media/appc-session6.png "Session policy")
 
-12.  Click on **Create**
+7. Click on **Create**
 
-13.  Create a second **Session policy** called *Protect download to
-     unmanaged devices.*
+8. Create a second **Session policy** called **Protect download to unmanaged devices**. In the **Session control type** field Select **Control file download (with DLP)**.
 
-14.  In the **Session control type** field Select **Control file download
-     (with DLP)** 
+    ![Session policy](/media/appc-session7.png "Session policy")
 
-	 ![xsznq6n8.jpg](/media/xsznq6n8.jpg)
+9. Under **Activity source** in the **Activities matching all of the following** section, select the following activity filters to apply to the policy:
 
-15.  Under **Activity source** in the **Activities matching all of the
-     following** section, select the following activity filters to
-     apply to the policy:
+    **Device tags** does not equal **Valid client certificate**
+    **App** equals **Salesforce**
 
- 	**Device tags** does not equal **Valid client certificate**
+    ![Session policy](/media/appc-session8.png "Session policy")
 
- 	**App** equals **Salesforce**
-
- 	![8s4bu84k.jpg](/media/8s4bu84k.jpg)
-
-16.  Clear the **Enabled** checkbox near **Content inspection**
-
-17.  Under **Actions**, select **Protect**
+10. Check the **Enabled** checkbox near **Content inspection**. Under **Actions**, select **Protect**
 
     ![c5xhnr87.jpg](/media/c5xhnr87.jpg)
 
