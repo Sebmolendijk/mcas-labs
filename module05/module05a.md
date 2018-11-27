@@ -2,11 +2,7 @@
 
 [:arrow_left: Home](/README.md)
 
-## Labs
-
-- [Cloud App Security PowerShell module:](MCAS-PowerShell-module) :clock10: 20 min
-
----
+[Cloud App Security PowerShell module:](MCAS-PowerShell-module) :clock10: 20 min
 
 ## Cloud App Security PowerShell module
 

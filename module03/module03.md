@@ -169,17 +169,17 @@ To test our files policies, perform the following tasks:
 
 8. To open the details of the file, click on its name. You can see there the matched policies and the scan status of the files.
 
-    ![Policy match](/media/info-file4.png "Policy match")
+    ![Policy match](/media/info-files4.png "Policy match")
 
-    ![Scan status](/media/info-file5.png "Scan status")
+    ![Scan status](/media/info-files5.png "Scan status")
 
 9. You can also view the related governance actions, like applying the Azure Information classification or moving the file to the quarantine folder, at the file level or in the **Governance log**.
 
-    ![File governance](/media/info-file6.png "File governance")
+    ![File governance](/media/info-files6.png "File governance")
 
     ![Governance log](/media/info-governance.png "Governance log")
 
-    ![Governance action](/media/info-file7.png "Governance action")
+    ![Governance action](/media/info-files7.png "Governance action")
 
 10. If you go back to the **Contoso Team Site**, you will also notice that the quarantined files will be replaced by placeholders containing your custom message. The original file will be moved to the "Quarantine" location we defined in the settings.
 
