@@ -36,11 +36,15 @@ With the access and session policies, you can:
 
       ![Dev sign-up](/media/appc-signup.png "Salesforce sign-up")
 
-    * Fill in the rest of details, click Sign me up, accept the verification email, and choose a new password.
+    * Fill in the rest of details, click **Sign me up**, accept the **verification email** in your mailbox, and choose a new password. Use the admin password provided in the lab environment if possible.
+
+        ![Dev sign-up](/media/appc-signup2.png "Salesforce sign-up")
+
+        ![Dev sign-up](/media/appc-signup3.png "Salesforce sign-up")
 
 2. Configure Salesforce in Azure AD for single sign-on.
 
-    * In Salesforce, go to **Setup**, search for **My Domain** and register a new domain matching your Office 365 domain, e.g., **ems123456-dev-ed.salesforce.com**
+    * In Salesforce, go to **Setup**, search for **My Domain** and register a new domain matching your Office 365 lab domain, e.g., **ems123456-dev-ed.salesforce.com**
 
         ![My domain](/media/sf-mydomain.png "My domain")
 
@@ -49,38 +53,46 @@ With the access and session policies, you can:
         ![My domain](/media/sf-registerdomain2.png "My domain")
 
     * Save **full Salesforce domain name**, including **https://** for the next step, e.g., **https://ems123456-dev-ed.salesforce.com**
+
+        >:warning: Do not close this page !
+
         ![My domain](/media/sf-registerdomain3.png "My domain")
 
-    * Go to **https://portal.azure.com** with the credentials below:
+    * Go to **https://portal.azure.com** were we will add Salesforce as an Enterprise application and configure **single sign-on**, which is a requirement for using App Control.
 
-        **Global Admin Username**
-        **Global Admin Password**
-	
-	1.   Go to **Azure Active
-        Directory**, click on **Enterprise applications**, choose **+
-        New application**, select All, choose **Salesforce**, call it
-        **SalesforceCAS**, and click on **Add**
+3. Go to **Azure Active Directory**, click on **Enterprise applications**, and add the **Salesforce** application. Call it **SalesforceCAS**, and click on **Add**.
 
-    1.   Go back to **Enterprise applications**, choose **All
-        applications**, and click on **SalesforceCAS**, click on
-        **Single sign-on**, and choose **SAML-based Sign-on** under
-        **Single Sign-on Mode**
+    ![Add SF](/media/appc-app1.png "Add SF")
 
-    1.   For both **Sign on URL** and **Identifier** set the full
-        Salesforce domain name, e.g.,
-        <https://ems123456-dev-ed.salesforce.com>
+    ![Add SF](/media/appc-app2.png "Add SF")
 
-    1.   Under SAML Signing Certificate, make sure that there is a
-        certificate present and that the **STATUS** is **Active**
+    ![Add SF](/media/appc-app3.png "Add SF")
 
-        1. If there is no certificate, click on the **Create new
-            certificate** link
+    ![Add SF](/media/appc-app4.png "Add SF")
 
-        1. If the **STATUS** is **New**, select the **Make new
-            certificate active** checkbox. When you click on **Save**,
-            you will get a **Rollover certificate** confirmation. Once
-            certificate rollover is approved, the certificate STATUS
-            will become **Active**.
+4. Now that Salesforce has been added as an Enterprise application, we have to configure **single sign-on**.
+
+    ![Add SF](/media/appc-app5.png "Add SF")
+
+5. Select **SAML** as the SSO method.
+
+    ![Add SF](/media/appc-app6.png "Add SF")
+
+6. We will now configure the SAML single sign-on using the information provided by Salesforce when we added our domain.
+
+    >:warning: Do not forget to add **https://** in front of the domain name provided by Salesforce.
+
+    ![Add SF](/media/appc-app7.png "Add SF")
+
+    ![Add SF](/media/appc-app8.png "Add SF")
+
+7. Close the pane and go to the **Step 4** of the SSO wizard and click on **View step-by-step instructions**. This page will give you all the required information for configuring Salesforce SSO.
+
+    ![Add SF](/media/appc-app9.png "Add SF")
+
+    ![Add SF](/media/appc-app10.png "Add SF")
+
+8. Go back to the **Salesforce admin page**.
 
     1.   Click on **Save**
 
