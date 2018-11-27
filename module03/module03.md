@@ -111,13 +111,13 @@ This is what we are going to configure in this lab.
 
     >|Policy name|Files matching all of the following|
     >|---------|---------|
-    >|**Quarantine sensitive pdf**| **Extension equals pdf**|
+    >|Quarantine sensitive pdf| Extension equals pdf|
 
     ![New policy](/media/info-policy3.png "New policy")
 
 6. Check the **Create an alert for each matching file** checkbox. In Governance actions of the policy, select **Put in admin quarantine** for OneDrive and SharePoint and click on the **Create** button.
 
-    ![New policy](/media/info-policy3.png "New policy")
+    ![New policy](/media/info-policy4.png "New policy")
 
 ---
 
@@ -128,31 +128,59 @@ This is what we are going to configure in this lab.
 To test our files policies, perform the following tasks:
 
 1. On Client01, unzip the content of the **Demo files.zip**.
-7.  Go to the **Contoso Team Site** documents library.
-8.  Upload the unzipped files to the site.
 
+2. Go to the **Contoso Team Site** documents library. You can use the **Search** to find the address to this site.
 
-	![xf5ozmrf.jpg](/media/xf5ozmrf.jpg)
-9.  Cloud App Security will now scan those documents and search for matches to our created policies. The scan can take some minutes before completion.
-10.  To monitor the evolution, go back to Cloud App Security and open the **Files** page of the investigations.
+    ![Team site](/media/info-test1.png "Team site")
 
-	![wb3gbn9w.jpg](/media/wb3gbn9w.jpg)
-11. When a match is discovered, you will see it in this page.
+    ![Team site](/media/info-test2.png "Team site")
 
-	![6g2kg3vq.jpg](/media/6g2kg3vq.jpg)
-12.  Open the details of the file. You can see there the matched policies and the scan status of the files.
+    ![Team site](/media/info-test3.png "Team site")
 
-	![rqbu6yyq.jpg](/media/rqbu6yyq.jpg)
-13.  You can also view the related governance actions in the Governance log.
+    ![Team site](/media/info-test4.png "Team site")
 
-	![bg5romej.jpg](/media/bg5romej.jpg)
-	
-	![fbsrlfsk.jpg](/media/fbsrlfsk.jpg)
+3. Upload the unzipped files to the site.
 
-14.  You will also notice that the quarantined files will be replaced by placeholders containing your custom message and be moved to the "Quarantine" location we defined.
+    ![Upload](/media/info-test5.png "Upload")
 
-	![as3niznc.jpg](/media/as3niznc.jpg)
+    ![Upload](/media/info-test6.png "Upload")
 
-	![juas1s58.jpg](/media/juas1s58.jpg)
+    ![Upload](/media/info-test7.png "Upload")
 
-	![drm0yj0c.jpg](/media/drm0yj0c.jpg)
+4. Cloud App Security will now scan those documents and search for matches to our created policies.
+
+    >:memo: The scan can take **some minutes** before completion.
+
+5. To monitor the evolution of the scan, go back to Cloud App Security and open the **Files** page of the investigations.
+
+    ![Search files](/media/info-files1.png "Search files")
+
+6. You can search for the files you uploaded using different criteria, like **file name**, **type**, ... or just look at all the files discovered by Cloud App Security.
+
+    ![Search files](/media/info-files2.png "Search files")
+
+    >:memo: The search page do not refresh automatically.
+
+7. When a policy match is discovered, you will see it in this page.
+
+    ![Policy match](/media/6g2kg3vq.jpg "Policy match")
+
+8. To open the details of the file, click on its name. You can see there the matched policies and the scan status of the files.
+
+    ![Policy match](/media/rqbu6yyq.jpg "Policy match")
+
+9. You can also view the related governance actions, like applying the Azure Information classification or moving the file to the quarantine folder, in the **Governance log**.
+
+    ![Governance log](/media/info-governance.png "Governance log")
+
+    ![bg5romej.jpg](/media/bg5romej.jpg)
+
+    ![fbsrlfsk.jpg](/media/fbsrlfsk.jpg)
+
+10. If you go back to the **Contoso Team Site**, you will also notice that the quarantined files will be replaced by placeholders containing your custom message. The original file will be moved to the "Quarantine" location we defined in the settings.
+
+    ![as3niznc.jpg](/media/as3niznc.jpg)
+
+    ![juas1s58.jpg](/media/juas1s58.jpg)
+
+    ![drm0yj0c.jpg](/media/drm0yj0c.jpg)
