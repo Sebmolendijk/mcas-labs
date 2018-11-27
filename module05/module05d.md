@@ -23,6 +23,8 @@ With the access and session policies, you can:
 
 ## Federate Salesforce with Azure AD
 
+[:arrow_up: Top](#Conditional-Access-App-Control)
+
 >:warning: As Conditional Access App Control requires the protected app to be federated with your IdP (Azure AD in our case), we will first federate Saleforce with our tenant before moving to the controls configuration. Please go through all the steps exactly as described to avoid any complications further in the lab.
 
 1. Create a Salesforce developer account.
@@ -156,6 +158,8 @@ With the access and session policies, you can:
 
 ## Deploy Salesforce to your users
 
+[:arrow_up: Top](#Conditional-Access-App-Control)
+
 We will now provide access to our users and validate the SSO experience.
 
 1. Go back to the Azure AD portal, within the **SalesforceCAS** app and choose **Users and groups**
@@ -185,6 +189,8 @@ We will now provide access to our users and validate the SSO experience.
 ---
 
 ## Deploy the reverse proxy capability for Salesforce
+
+[:arrow_up: Top](#Conditional-Access-App-Control)
 
 The next step of the configuration is to create a Conditional access policy in Azure AD and then complete the configuration in Cloud App Security.
 
@@ -241,6 +247,8 @@ The next step of the configuration is to create a Conditional access policy in A
 
 ### Configure device authentication
 
+[:arrow_up: Top](#Conditional-Access-App-Control)
+
 Conditional Access App Control is capable to identify company devices using either Azure AD, Intune or certificates (provided by 3rd party MDM for example). We will here simulate the 3rd party MDM scenario, using client certificates.
 
 1. Go to the settings and at the bottom of the page, choose **Device identification**.
@@ -258,6 +266,8 @@ Conditional Access App Control is capable to identify company devices using eith
 ---
 
 ### Create a session policy
+
+[:arrow_up: Top](#Conditional-Access-App-Control)
 
 To control our users sessions to Salesforce, we have now to create a **policy**.
 
@@ -314,6 +324,8 @@ To control our users sessions to Salesforce, we have now to create a **policy**.
 
 ### Test the user experience
 
+[:arrow_up: Top](#Conditional-Access-App-Control)
+
 1. Extract the file **silvia.pfx** from the **Client Certificate** folder in **Demo files.zip** file you've received
 
 2. Double click on the **silvia.pfx** file, click **Next**, **Next**, enter the password **acme**, click **Next**, **Next**, **Finish**.
@@ -349,6 +361,8 @@ To control our users sessions to Salesforce, we have now to create a **policy**.
 ---
 
 ### Test the admin experience
+
+[:arrow_up: Top](#Conditional-Access-App-Control)
 
 1. Go back to the Cloud App Security portal, and under **Investigate**  choose **Activity log**
 
