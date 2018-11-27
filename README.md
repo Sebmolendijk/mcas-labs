@@ -20,14 +20,6 @@ Although some labs are pretty straight forward ,we expect you to already have so
 * Security & Compliance Center: https://protection.office.com
 * Windows Defender ATP: https://securitycenter.windows.com
 
-### Users
-
-| User          | Username                      | Password       |
-| ----          | --------                      | --------       |
-| Administrator |admin@xyztenant.onmicrosoft.com  | xyz |
-| Adele Vance   |adelev@xyztenant.onmicrosoft.com | xyz |
-| Megan Bowens  |meganb@xyztenant.onmicrosoft.com | xyz |
-
 ---
 
 ## Labs

@@ -23,8 +23,8 @@ You should find the shortcut on your desktop:
 
 [:arrow_up: Top](#Cloud-App-Security-threat-detection-lab)
 
-As your environments auditing might not be configured yet and will take up to **24h** before being enabled, the alerts related investigations will be performed in the environment provided by your instructor.
-Review the alerts in the environment and investigate to identify the users and the malicious activities performed.
+:warning: As your environments auditing might not be configured yet and will take up to **24h** before being enabled, the alerts related investigations will be performed **in the environment provided by your instructor**. Credentials are provided below.
+Search and review the alerts in that environment and investigate to identify the users and the malicious activities performed.
 
 |Portal               |Username                   |Password
 |----------------- |----------------------------------- |---------------------
@@ -36,17 +36,13 @@ Review the alerts in the environment and investigate to identify the users and t
 * Cloud App Security: https://portal.cloudappsecurity.com
 * Windows Defender ATP: https://securitycenter.windows.com
 
-<!-- variables regarding the environment-->
-
-[library]: https://xyztenant.sharepoint.com/sites/Demo
-
 ### Users
 
 | User          | Username                      | Password       |
 | ----          | --------                      | --------       |
-| Administrator |admin@xyztenant.onmicrosoft.com  | ParisPassword1 |
-| Adele Vance   |adelev@xyztenant.onmicrosoft.com | ParisPassword1 |
-| Megan Bowens  |meganb@xyztenant.onmicrosoft.com | ParisPassword1 |
+| Admin |admin@xyztenant.onmicrosoft.com  | * |
+| Amy Albers   |amy@xyztenant.onmicrosoft.com | * |
+| Eric Gruber  |eric@xyztenant.onmicrosoft.com | * |
 
 ## Labs
 
@@ -73,9 +69,9 @@ This detection identifies that users were active from an IP address that has bee
 
    ![Connect to TOR](/media/td-torlaunch.png "Connect to TOR")
 
-2. Open Office 365 web mail by going to https://outlook.office.com and enter Megan Bowens credentials.
+2. Open Office 365 web mail by going to https://outlook.office.com and enter Eric Gruber credentials.
 
-3. Go to [this SharePoint library][library] and download some documents.
+3. Go to the **Contoso Team Site** and download some documents.
 
 ### Investigate
 
@@ -115,9 +111,9 @@ This detection identifies two user activities (is a single or multiple sessions)
 
 ### Simulate the malicious activity
 
-1. In your Windows 10 lab VM, open Office 365 web mail by going to https://outlook.office.com and enter Adele Vance credentials. This authentication will come from an Azure IP address, where your client is hosted.
+1. In your Windows 10 lab VM, open Office 365 web mail by going to https://outlook.office.com and enter Amy Albers credentials. This authentication will come from an Azure IP address, where your client is hosted.
 
-2. On your host PC, go to https://outlook.office.com and authenticate again as Adele Vance.
+2. On your host PC, go to https://outlook.office.com and authenticate again as Amy Albers.
 
 ### Investigate
 
@@ -181,7 +177,7 @@ This detection identifies malicious files in your cloud storage, whether they're
 
    ![Security Center](/media/td-winsecuritycenter.png "Windows Security Center")
 
-3. Go to https://portal.office.com and enter Adele Vance credentials. Go to OneDrive for Business:
+3. Go to https://portal.office.com and enter Amy Albers credentials. Go to OneDrive for Business:
 
    ![App launcher](/media/td-officeapplauncher.png "Office apps launcher")
 
@@ -235,7 +231,7 @@ This detection looks for suspicious email forwarding rules, for example, if a us
 
 1. On your Windows 10 lab VM, open TOR browser.
 
-2. Open Office 365 web mail by going to https://outlook.office.com and enter Megan Bowens credentials.
+2. Open Office 365 web mail by going to https://outlook.office.com and enter Eric Gruber credentials.
 
 3. Click on the “People” icon:
 
