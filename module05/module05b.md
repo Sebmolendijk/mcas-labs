@@ -4,7 +4,7 @@
 
 ## Labs
 
-* [Create and review a snapshot reports:](Configure-and-test-continuous-reports) :clock10: 10 min
+* [Create and review a snapshot reports:](#Configure-and-test-continuous-reports) :clock10: 10 min
 
 ---
 
@@ -41,7 +41,7 @@ To create snapshot reports:
 
     ![Browse logs](/media/dis-browse.png "Browse logs")
 
-    ![Select logs](/media/dis-downloadlog.png "Select logs")
+    ![Select logs](/media/dis-selectlogs.png "Select logs")
 
 6. Now that the log has been selected, click on the **Create** button to create your report.
 

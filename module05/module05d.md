@@ -174,8 +174,6 @@ We will now provide access to our users and validate the SSO experience.
 
     ![Assign users](/media/appc-app24.png "Assign users")
 
-    ![Assign users](/media/appc-app24.png "Assign users")
-
     >:warning: If you want to assign Salesforce to more users, you must create a user for them in Salesforce as we didn't configured **provisionning**. Our admin account already has an an account matching his UPN, created during the Salesforce configuration.
 
 3. Test the setup by going to [https://myapps.microsoft.com](https://myapps.microsoft.com) with your admin account and click on the **SalesforceCAS** app. You should then experience SSO to Salesforce.

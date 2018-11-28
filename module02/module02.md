@@ -9,13 +9,13 @@ To use this capability, you will perform in this lab the configuration and troub
 
 [:arrow_up: Top](#Cloud-App-Security-Discovery-lab)
 
-> NOTE: The Docker engine has been pre-installed on LinuxVM in your lab environment, using the commands provided in the [deployment guide](https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker-ubuntu).
-
-Those commands download a script installing the Docker engine on your host computer (Ubuntu in this case) and pull the latest Cloud App Security collector image from the Docker library.
+> NOTE: The Docker engine has been pre-installed on LinuxVM in your lab environment, **Client01** in this case, using the commands (below) provided in the [deployment guide](https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker-ubuntu).
 
 ``` bash
     curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/public-files/MCASInstallDocker.sh && chmod +x /tmp/MCASInstallDocker.sh; /tmp/MCASInstallDocker.sh
 ```
+
+Those commands download a script installing the Docker engine on your host computer (Ubuntu in this case) and pull the latest Cloud App Security collector image from the Docker library.
 
 ### Create a data source and a log collector in the Cloud App Security portal
 
@@ -150,7 +150,7 @@ Those commands download a script installing the Docker engine on your host compu
 
     >:warning: If you are **not** able to connect to the log collector FTP service, verify that you successfully created the new log collector instance within Putty in previous steps.
 
-20. On the left pane, move to the **Desktop** folder and drag your demo Squid log into the folder named for your data source (**SquidLogs**). After some minutes, the log collector will upload your logs.
+20. On the left pane, move to the **Desktop** folder and drag your example Squid log (From Step 7) into the folder named for your data source (**SquidLogs**). After some minutes, the log collector will upload your logs.
 
     ![Log upload](/media/dis-winscplogupload.png "Log upload")
     ![Log upload](/media/dis-winscplogupload2.png "Log upload")
