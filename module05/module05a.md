@@ -2,7 +2,7 @@
 
 [:arrow_left: Home](/README.md)
 
-[Cloud App Security PowerShell module:](MCAS-PowerShell-module) :clock10: 20 min
+[Cloud App Security PowerShell module:](#Cloud-App-Security-PowerShell-module) :clock10: 20 min
 
 ## Cloud App Security PowerShell module
 

@@ -2,7 +2,7 @@
 
 [:arrow_left: Home](/README.md)
 
-[Manage admin access:](#Manage-admin-accesst) :clock10: 15 min
+[Manage admin access:](#Manage-admin-access) :clock10: 15 min
 
 For this task, you are asked to delegate admin access to monitor a dedicated group of users for a specific region, without adding them to the Global Admin management role.
 

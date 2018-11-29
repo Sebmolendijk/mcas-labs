@@ -47,13 +47,12 @@ Search and review the alerts in that environment and investigate to identify the
 ## Labs
 
 * [Anonymous access:](#Anonymous-access) :clock10: 5 min
-* [Impossible travel:](#Impossibletravel) :clock10: 5 min
+* [Impossible travel:](#Impossible-travel) :clock10: 5 min
 * [Activity from infrequent country:](#Activity-from-infrequent-country) :clock10: 5 min
 * [Malware detection:](#Malware-detection) :clock10: 5 min
 * [Email exfiltration using suspicious inbox forwarding:](#Email-exfiltration-using-suspicious-inbox-forwarding) :clock10: 5 min
 * [Ransomware activity:](#Ransomware-activity) :clock10: 5 min
 * [Suspicious application consent:](#Suspicious-application-consent) :clock10: 5 min
-* [Impossible travel:](#Impossibletravel) :clock10: 5 min
 
 ---
 
@@ -330,11 +329,11 @@ Here is an example of such user consent:
 
 1. Without even creating policies, Cloud App Security shows you the applications that received permissions from your users:
 
-   ![App permissions](/media/td-apppermissions.png "App permissions")
+   ![App permissions](/media/td-oauth.png "App permissions")
 
 2. From this page, you can easily see who granted permissions to those apps, if they are commonly used or their permissions level:
 
-   ![App commodity](/media/td-appcommodity.png "App commodity")
+   ![App commodity](/media/td-zapiercommodity.png "App commodity")
 
 3. If you detect that an application should not be granted access to your environment, you can revoke the app access.
    > **IMPORTANT:** This operation will apply to the **entire** organization:
