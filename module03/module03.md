@@ -54,8 +54,9 @@ We will apply an Azure Information Protection template on documents containing s
 
     ![DCS](/media/info-dcs.png "DCS")
 
-6. Click on sensitive information type, search and select the **SSN related** ones and click on **Done**.
+6. Click on **Choose inspection type** and then on **sensitive information type**. Search and select the **SSN related** ones and click on **Done**.
 
+    ![SSN type](/media/info-type.png "SSN type")
     ![SSN type](/media/info-ssn.png "SSN type")
 
 7. Click on the **Unmask** checkbox.

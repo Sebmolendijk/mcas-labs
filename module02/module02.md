@@ -52,7 +52,7 @@ Those commands download a script installing the Docker engine on your host compu
 
 6. While still in the Add data source dialog, click **View sample of expected log file**.
 
-    >:memo: **NOTE:** Using this information, you can verify with your network team that the provided logs match the format expect by Cloud App Security. If it doesn't, you can should a custom parser.
+    >:memo: **NOTE:** Using this information, you can verify with your network team that the provided logs match the format expect by Cloud App Security. If it doesn't, you should use a custom parser.
 
     ![Verify log format](/media/dis-verifylog.png "Verify log format")
 
@@ -78,7 +78,7 @@ Those commands download a script installing the Docker engine on your host compu
     |Host IP address|**192.168.141.125**
     |Data source(s)|**SquidLogs**
 
-    ![Create log collector](/media/dis-addlogcollector.png "Create log collector")
+    ![Create log collector](/media/dis-createlogcollector.png "Create log collector")
 
 11. After clicking on the **Update** button, you have now the required steps to create your log collector instance on **LinuxVM**.
     >:warning: Do not close this window!
@@ -89,7 +89,7 @@ Those commands download a script installing the Docker engine on your host compu
     (echo 1f5b5fb2a0d778e3d57f26ca5ab11574db0751166477940528ccf19a7c4) | docker run --name LogCollector -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='192.168.141.125'" -e "PROXY=" -e "SYSLOG=false" -e "CONSOLE=xyztenant.eu.portal.cloudappsecurity.com" -e "COLLECTOR=LogCollector" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i microsoft/caslogcollector starter
     ```
 
-    >**INFO:** This command line contains the different parameters to instanciate a new log collector on the Linux host:
+    >**INFO:** This command line contains the different parameters to instantiate a new log collector on the Linux host:
     >* An API token to connect to Cloud App Security for uploading the logs: *1f5b5fb2a0d778e3d57f26ca5ab11574db0751166477940528ccf19a7c4*
     >* The docker parameters to configure the log collector container: *docker run ...*
 
