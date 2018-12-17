@@ -7,9 +7,9 @@ Microsoft Cloud App Security helps you prevent this kind of disaster before it h
 
 ## Labs
 
-* [Apply AIP classification to SSN documents:](Apply-AIP-classification-to-SSN-documents) :clock10: 10 min
-* [Quarantine sensitive PDF for review:](Quarantine-sensitive-PDF-for-review) :clock10: 10 min
-* [Test our policies:](Test-our-policies) :clock10: 10 min
+* [Apply AIP classification to SSN documents:](#Apply-AIP-classification-to-SSN-documents) :clock10: 10 min
+* [Quarantine sensitive PDF for review:](#Quarantine-sensitive-PDF-for-review) :clock10: 10 min
+* [Test our policies:](#Test-our-policies) :clock10: 10 min
 
 ---
 

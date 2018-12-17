@@ -4,7 +4,7 @@
 
 ## Labs
 
-* [How to troubleshoot the Docker log collector:](How-to-troubleshoot-the-Docker-log-collector) :clock10: 15 min
+* [How to troubleshoot the Docker log collector:](#How-to-troubleshoot-the-Docker-log-collector) :clock10: 15 min
 
 ---
 
